@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    sdgasad
+    <div class="h-[calc(100vh*2)]"></div>
     <Footer />
   </div>
 </template>

@@ -1,49 +1,49 @@
 <template>
-  <footer class="bg-gray-900 text-white py-10">
+  <footer class="bg-neutral1 text-white py-10 absolute w-full bottom-0">
     <div class="container mx-auto flex flex-wrap justify-between">
       <div class="w-full md:w-1/4 mb-6 md:mb-0">
-        <img src="./assets/logo.png" alt="Logo" class="h-16 mb-4" />
-        <p class="text-gray-400">
+        <img src="../assets/logo2.svg" alt="Logo" class="md:w-1/2 ml-16 mb-4" />
+        <p class="text-neutral5 ml-16">
           Open Government Indonesia (OGI) merupakan sebuah gerakan keterbukaan
           dan partisipasi melalui kolaborasi inovatif.
         </p>
-        <div class="flex mt-4">
+        <div class="flex  ml-16 mt-16">
           <a href="#" class="mr-4">
-            <img src="./assets/icon-facebook.svg" alt="Facebook" class="h-6" />
+            <img src="../assets/Facebook.svg" alt="Facebook" class="h-9" />
           </a>
           <a href="#" class="mr-4">
-            <img src="./assets/icon-twitter.svg" alt="Twitter" class="h-6" />
+            <img src="../assets/Twitter.svg" alt="Twitter" class="h-9" />
           </a>
           <a href="#" class="mr-4">
             <img
-              src="./assets/icon-instagram.svg"
+              src="../assets/Instagram.svg"
               alt="Instagram"
-              class="h-6"
+              class="h-9"
             />
           </a>
           <a href="#">
-            <img src="./assets/icon-youtube.svg" alt="YouTube" class="h-6" />
+            <img src="../assets/Youtube.svg" alt="YouTube" class="h-9" />
           </a>
         </div>
       </div>
-      <div class="w-full md:w-1/4 mb-6 md:mb-0">
+      <div class="w-full md:w-1/4 mb-6 md:mb-0 pl-11">
         <h2 class="font-semibold mb-4">Kontak Info</h2>
-        <p class="text-gray-400">
-          Alamat<br />
+        <h2 class="font-semibold">Alamat</h2>
+        <p class="text-neutral5 mb-4">
           Jl. Taman Suropati No.2 Menteng, Jakarta Pusat 10310
         </p>
-        <p class="text-gray-400 mt-2">
-          Telepon<br />
+        <h2 class="font-semibold">Telepon</h2>
+        <p class="text-neutral5 mb-4">
           (62-21) 3148551 ext . 3504, 3503
         </p>
-        <p class="text-gray-400 mt-2">
-          Email<br />
+        <h2 class="font-semibold">Email</h2>
+        <p class="text-neutral5">
           sekretariat.ogi@bappenas.go.id
         </p>
       </div>
-      <div class="w-full md:w-1/4 mb-6 md:mb-0">
-        <h2 class="font-semibold mb-4">Eksplorasi</h2>
-        <ul class="text-gray-400">
+      <div class="w-full md:w-1/4 mb-6 md:mb-0 ">
+        <h2 class="font-semibold mb-4 ml-11">Eksplorasi</h2>
+        <ul class="text-neutral5 ml-11">
           <li class="mb-2">
             <a href="#" class="hover:text-white">Tentang Kami</a>
           </li>
@@ -60,8 +60,8 @@
         </ul>
       </div>
       <div class="w-full md:w-1/4">
-        <h2 class="font-semibold mb-4">Tautan Lainnya</h2>
-        <ul class="text-gray-400">
+        <h2 class="font-semibold mb-4 ">Tautan Lainnya</h2>
+        <ul class="text-neutral5">
           <li class="mb-2">
             <a href="#" class="hover:text-white">BAPPENAS</a>
           </li>
@@ -82,8 +82,8 @@
         </ul>
       </div>
     </div>
-    <div class="border-t border-gray-700 mt-6 pt-4">
-      <p class="text-center text-gray-400">
+    <div class="border-t border-neutral3 mt-6 pt-4 mx-28">
+      <p class="text-center text-neutral5">
         Hak Cipta © 2022 Open Government Indonesia
       </p>
     </div>
@@ -95,4 +95,4 @@ export default {
   name: "Footer",
 };
 </script>
-  
+ 

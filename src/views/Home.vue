@@ -44,59 +44,7 @@
     </div>
 
     <!-- RAN Card -->
-    <div
-      class="bg-primary-5/10 max-h-[calc(1200vh)] pt-12 mt-36 mx-16 rounded-3xl overflow-hidden"
-    >
-      <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-4 text-primary-1">
-          <span class="text-neutral-1">Apa itu</span> Rencana Aksi Nasional
-          (RAN)?
-        </h2>
-        <p class="text-lg mb-6 max-w-3xl mx-auto text-neutral-1">
-          Langkah nyata menuju transparansi dan partisipasi publik.
-          Bersama-sama, kita wujudkan pemerintahan yang inovatif, akuntabel, dan
-          inklusif!
-        </p>
-        <a href="#" class="cursor-pointer">
-          <button
-            class="bg-primary-1 hover:bg-primary-2 text-white font-semibold py-2 px-6 mb-8 rounded-full shadow-sm transition duration-300 shadow-primary-1 group mt-4 cursor-pointer"
-          >
-            Lihat Rencana Aksi Nasional
-          </button>
-        </a>
-        <div class="flex justify-center -space-x-6 mt-20">
-          <div class="transform transition-transform hover:scale-105 z-0 pt-16">
-            <img
-              src="../assets/ran18-20.jpeg"
-              alt="Rencana Aksi Nasional 2018-2020"
-              class="w-96 -rotate-12 rounded-3xl"
-            />
-          </div>
-          <div class="transform transition-transform hover:scale-105 z-10">
-            <img
-              src="../assets/ran23-24.png"
-              alt="Rencana Aksi Nasional 2023-2024"
-              class="w-96 rounded-3xl"
-            />
-          </div>
-          <div class="transform transition-transform hover:scale-105 z-0 pt-16">
-            <img
-              src="../assets/ran20-22.jpg"
-              alt="Rencana Aksi Nasional 2020-2022"
-              class="w-96 rotate-12 rounded-3xl"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="z-0">
-        <div class="justify-start items-start w-2/3">
-          <img src="../assets/grafik-home-3.png" alt="" class="w-1/2" />
-        </div>
-        <div class="justify-start items-start w-2/3">
-          <img src="../assets/grafik-home-3.png" alt="" class="w-1/2" />
-        </div>
-      </div>
-    </div>
+    <RanCard />
 
     <!-- Tim Pengarah -->
     <div class="container mx-auto py-12 text-center max-w-5xl">
@@ -144,16 +92,148 @@
     <!-- Gov Slider -->
     <GovSlider />
 
-    <div class="h-[calc(100vh*2)]"></div>
+    <!-- Social Media -->
+    <div class="py-12">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-neutral-1">
+          Ikuti jejak sosial kami
+        </h2>
+      </div>
+      <div class="flex justify-center space-x-12">
+        <!-- Facebook Card -->
+        <div
+          class="bg-white rounded-2xl p-6 text-center w-96 drop-shadow-xl max-h-[390px] overflow-hidden"
+        >
+          <div
+            class="flex justify-center items-center mb-4 bg-red-100 rounded-full w-24 h-24 mx-auto"
+          >
+            <i data-feather="facebook" class="h-12 w-12 text-primary-1"></i>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-1">Facebook</h3>
+          <a href="#" class="link-hover text-sm text-primary-1"
+            >Lihat Profil ➔</a
+          >
+          <div class="flex justify-center -space-x-4 mt-8">
+            <div
+              class="transform transition-transform hover:-translate-y-1 z-0 pt-16"
+            >
+              <img
+                src="../assets/fb-2.jpg"
+                alt="Facebook-2"
+                class="w-92 -rotate-6 rounded-lg"
+              />
+            </div>
+            <div
+              class="transform transition-transform hover:-translate-y-1 z-10"
+            >
+              <img
+                src="../assets/fb-1.jpg"
+                alt="Facebook-1"
+                class="w-92 rounded-lg mt-6"
+              />
+            </div>
+            <div
+              class="transform transition-transform hover:-translate-y-1 z-0 pt-16"
+            >
+              <img
+                src="../assets/fb-3.jpg"
+                alt="Facebook-3"
+                class="w-92 rotate-12 rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Twitter Card -->
+        <div
+          class="bg-white rounded-2xl drop-shadow-xl p-6 text-center w-96 max-h-[390px] overflow-hidden"
+        >
+          <div
+            class="flex justify-center items-center mb-4 bg-red-100 rounded-full w-24 h-24 mx-auto"
+          >
+            <img
+              src="../assets/x-twitter.png"
+              class="h-20 w-20 text-primary-1"
+              alt="twitter"
+            />
+          </div>
+          <h3 class="text-lg font-bold text-neutral-1">Twitter</h3>
+          <a href="#" class="link-hover text-sm text-primary-1"
+            >Lihat Profil ➔</a
+          >
+          <div>
+            <img
+              src="../assets/tw-1.png"
+              alt="twitter-1"
+              class="drop-shadow-xl rounded-xl -rotate-3 mt-2 max-h-16 ml-4 hover:-translate-y-1"
+            />
+            <img
+              src="../assets/tw-2.png"
+              alt="twitter-2"
+              class="drop-shadow-xl rounded-xl mt-4 max-h-20 ml-6 w-72 hover:-translate-y-1"
+            />
+            <img
+              src="../assets/tw-3.png"
+              alt="twitter-3"
+              class="drop-shadow-xl rounded-xl -rotate-3 mt-4 max-h-24 ml-6 w-72 hover:-translate-y-1"
+            />
+          </div>
+        </div>
+        <!-- Instagram Card -->
+        <div
+          class="bg-white rounded-2xl drop-shadow-xl p-6 text-center w-96 max-h-[390px] overflow-hidden"
+        >
+          <div
+            class="flex justify-center items-center mb-4 bg-red-100 rounded-full w-24 h-24 mx-auto"
+          >
+            <i data-feather="instagram" class="h-12 w-12 text-primary-1"></i>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-1">Instagram</h3>
+          <a href="#" class="link-hover text-sm text-primary-1"
+            >Lihat Profil ➔</a
+          >
+          <div class="flex justify-center -space-x-4 mt-8">
+            <div
+              class="transform transition-transform hover:-translate-y-1 z-0 pt-16"
+            >
+              <img
+                src="../assets/ig-1.jpg"
+                alt="Instagram-2"
+                class="w-92 -rotate-6 rounded-lg"
+              />
+            </div>
+            <div
+              class="transform transition-transform hover:-translate-y-1 z-10"
+            >
+              <img
+                src="../assets/ig-2.jpg"
+                alt="Instagram-1"
+                class="w-92 rounded-lg mt-6"
+              />
+            </div>
+            <div
+              class="transform transition-transform hover:-translate-y-1 z-0 pt-16"
+            >
+              <img
+                src="../assets/ig-3.jpg"
+                alt="Instagram-3"
+                class="w-92 rotate-12 rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="h-[calc(100vh*2)]"></div> -->
   </div>
 </template>
-
 <script>
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import LogoCard from "../components/LogoCard.vue";
 import PartnerSlider from "../components/PartnerSlider.vue";
 import GovSlider from "../components/GovSlider.vue";
+import RanCard from "../components/RanCard.vue";
 
 export default {
   components: {
@@ -162,6 +242,7 @@ export default {
     LogoCard,
     PartnerSlider,
     GovSlider,
+    RanCard,
   },
 
   data() {

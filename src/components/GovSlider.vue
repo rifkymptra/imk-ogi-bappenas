@@ -1,7 +1,6 @@
-
 <template>
   <div
-    class="partner-slider bg-neutral-5/25 my-12 text-center text-white py-12 rounded-3xl relative"
+    class="partner-slider bg-neutral-5/25 my-12 text-center text-white py-12 rounded-3xl relative mx-12 overflow-hidden"
   >
     <h2 class="text-[56px] font-bold text-neutral-1">
       Selain mitra masyarakat,
@@ -14,7 +13,7 @@
       sipil, akademisi, dan mitra pembangunan untuk mendorong partisipasi publik
       dan menciptakan pemerintahan yang transparan dan akuntabel.
     </p>
-    <div class="overflow-hidden relative mx-auto max-w-full">
+    <div class="overflow-hidden relative mx-auto max-w-full z-10">
       <div
         class="flex transition-transform duration-500"
         :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -22,53 +21,59 @@
         <div
           v-for="(group, index) in chunkedPartners"
           :key="index"
-          class="flex-shrink-0 flex w-full justify-around"
+          class="flex-shrink-0 flex w-full justify-around px-16"
         >
           <div
             v-for="(partner, i) in group"
             :key="i"
-            class="flex justify-center"
+            class="flex justify-center items-center bg-white h-44 w-44 rounded-3xl p-6"
           >
             <img
               :src="`/src/assets/${partner.logo}`"
               alt=""
-              class="h-20 w-20 mb-4"
+              class="max-h-fit flex items-center justify-center"
             />
           </div>
         </div>
       </div>
     </div>
     <div
-      class="flex justify-between absolute inset-y-1/2 w-full px-4 transform -translate-y-1/2"
+      class="flex justify-between absolute inset-y-2/3 w-full px-4 transform -translate-y-1/2"
     >
-      <button @click="prevSlide" class="text-4xl text-white focus:outline-none">
-        &#10094;
+      <button
+        @click="prevSlide"
+        class="focus:outline-none bg-primary-1 h-11 w-11 rounded-2xl items-center justify-center flex shadow-md shadow-primary-1"
+      >
+        <svg data-feather="arrow-left" class="h-6 w-6"></svg>
       </button>
-      <button @click="nextSlide" class="text-4xl text-white focus:outline-none">
-        &#10095;
+      <button
+        @click="nextSlide"
+        class="focus:outline-none bg-primary-1 h-11 w-11 rounded-2xl items-center justify-center flex shadow-md shadow-primary-1"
+      >
+        <i data-feather="arrow-right" class="h-6 w-6"></i>
       </button>
     </div>
-    <div class="flex justify-center mt-4 space-x-2">
+    <div class="flex justify-center mt-8 mb-8 space-x-2">
       <span
         v-for="(group, index) in chunkedPartners"
         :key="index"
         :class="{
-          'bg-white': index === currentSlide,
-          'bg-gray-500': index !== currentSlide,
+          'bg-primary-1': index === currentSlide,
+          'bg-neutral-2': index !== currentSlide,
         }"
-        class="h-3 w-3 rounded-full cursor-pointer"
+        class="h-[10px] w-[10px] rounded-full cursor-pointer"
         @click="setSlide(index)"
       ></span>
     </div>
     <img
-      src="../assets/dekorasi-kiri.png"
+      src="../assets/grafik-home-1.png"
       alt=""
-      class="absolute bottom-0 left-0 w-32"
+      class="absolute -bottom-32 -left-24 w-64 z-0"
     />
     <img
-      src="../assets/dekorasi-kanan.png"
+      src="../assets/grafik-home-4.png"
       alt=""
-      class="absolute top-0 right-0 w-32"
+      class="absolute -top-24 -right-40 w-76 z-0"
     />
   </div>
 </template>
@@ -100,6 +105,7 @@ export default {
         { logo: "newkl9.png", name: "KL 9" },
         { logo: "newkl10.png", name: "KL 10" },
       ],
+      autoSlideInterval: null,
     };
   },
   computed: {
@@ -123,6 +129,20 @@ export default {
     setSlide(index) {
       this.currentSlide = index;
     },
+    autoSlide() {
+      this.autoSlideInterval = setInterval(() => {
+        this.nextSlide();
+      }, 5000);
+    },
+    clearAutoSlide() {
+      clearInterval(this.autoSlideInterval);
+    },
+  },
+  mounted() {
+    this.autoSlide();
+  },
+  beforeDestroy() {
+    this.clearAutoSlide();
   },
 };
 </script>

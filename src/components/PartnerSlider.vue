@@ -17,18 +17,33 @@
         <div
           v-for="(group, index) in chunkedPartners"
           :key="index"
-          class="flex-shrink-0 flex w-full justify-around"
+          class="flex-shrink-0 w-full"
         >
-          <div
-            v-for="(partner, i) in group"
-            :key="i"
-            class="flex justify-center"
-          >
-            <img
-              :src="`/src/assets/${partner.logo}`"
-              alt=""
-              class="h-20 w-20 mb-4"
-            />
+          <div class="grid grid-cols-6 mb-4">
+            <div
+              v-for="(partner, i) in group.slice(0, 6)"
+              :key="i"
+              class="flex justify-center items-center bg-white max-w-fit text-center px-2 rounded-md"
+            >
+              <img
+                :src="`/src/assets/${partner.logo}`"
+                :alt="partner.name"
+                class="h-20 w-20 mb-4"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-4 justify-center">
+            <div
+              v-for="(partner, i) in group.slice(6, 10)"
+              :key="i"
+              class="flex justify-center items-center bg-white max-w-fit text-center px-2 rounded-md mb-4"
+            >
+              <img
+                :src="`/src/assets/${partner.logo}`"
+                :alt="partner.name"
+                class="h-20 w-20 mb-4"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -74,22 +89,34 @@ export default {
     return {
       currentSlide: 0,
       partners: [
-        { logo: "logo-partner1.png", name: "Partner 1" },
-        { logo: "logo-partner2.png", name: "Partner 2" },
-        { logo: "logo-partner3.png", name: "Partner 3" },
-        { logo: "logo-partner4.png", name: "Partner 4" },
-        { logo: "logo-partner5.png", name: "Partner 5" },
-        { logo: "logo-partner6.png", name: "Partner 6" },
-        { logo: "logo-partner7.png", name: "Partner 7" },
-        { logo: "logo-partner8.png", name: "Partner 8" },
-        { logo: "logo-partner9.png", name: "Partner 9" },
-        { logo: "logo-partner10.png", name: "Partner 10" },
+        { logo: "cso.png", name: "Partner 1" },
+        { logo: "cso1.png", name: "Partner 2" },
+        { logo: "cso2.png", name: "Partner 3" },
+        { logo: "cso3.png", name: "Partner 4" },
+        { logo: "cso4.png", name: "Partner 5" },
+        { logo: "cso5.png", name: "Partner 6" },
+        { logo: "cso6.png", name: "Partner 7" },
+        { logo: "cso7.png", name: "Partner 8" },
+        { logo: "cso8.png", name: "Partner 9" },
+        { logo: "cso9.png", name: "Partner 10" },
+        { logo: "cso10.png", name: "Partner 11" },
+        { logo: "cso11.png", name: "Partner 12" },
+        { logo: "cso12.png", name: "Partner 13" },
+        { logo: "cso13.png", name: "Partner 14" },
+        { logo: "cso14.png", name: "Partner 15" },
+        { logo: "cso15.png", name: "Partner 16" },
+        { logo: "cso16.jpg", name: "Partner 17" },
+        { logo: "cso17.png", name: "Partner 18" },
+        { logo: "cso18.jpg", name: "Partner 19" },
+        { logo: "cso19.png", name: "Partner 20" },
+        { logo: "cso20.png", name: "Partner 21" },
+        { logo: "cso21.png", name: "Partner 22" },
       ],
     };
   },
   computed: {
     chunkedPartners() {
-      const chunkSize = 5;
+      const chunkSize = 10;
       return Array.from(
         { length: Math.ceil(this.partners.length / chunkSize) },
         (v, i) => this.partners.slice(i * chunkSize, i * chunkSize + chunkSize)

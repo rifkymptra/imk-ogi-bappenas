@@ -18,10 +18,7 @@ export default {
 </script>
 
 <template>
-  <header
-    class="bg-white border-b font-jakarta fixed w-full top-0"
-    style="z-index: 1"
-  >
+  <header class="bg-white border-b font-jakarta fixed w-full top-0 z-50">
     <div class="container mx-auto px-4 flex items-center justify-between">
       <div class="flex items-center space-x-4">
         <img src="../assets/logo.png" alt="Logo" class="h-20" />

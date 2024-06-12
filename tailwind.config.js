@@ -32,6 +32,15 @@ export default {
         'neutral-4': '#BBBCBC',
         'neutral-5': '#D9D9D6',
     },
+    width: {
+      'card-500': '500px',
+    },
+    height: {
+      'card-565': '565px',
+    },
+    borderRadius: {
+      'border-20': '20px',
+    },
   },
 },
   plugins: [],

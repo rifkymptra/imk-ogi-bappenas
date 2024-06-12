@@ -3,7 +3,7 @@
       <Header />
       <div class="container mx-auto flex flex-col items-center">
         <div class="h-[calc(20vh)]"></div>
-        <h1 class="text-4xl font-bold my-5">
+        <h1 class="text-[3.5rem] font-bold my-5">
           Publikasi <span class="text-primary-1">OGI</span>
         </h1>
         
@@ -57,8 +57,4 @@
     },
   };
   </script>
-  
-  <style scoped>
-  /* Add any additional styles if necessary */
-  </style>
   

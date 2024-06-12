@@ -35,7 +35,7 @@
     mounted() {
       // Initialize Feather icons
       this.$nextTick(() => {
-        feather.replace()
+        this.$feather.replace()
       });
     }
   };

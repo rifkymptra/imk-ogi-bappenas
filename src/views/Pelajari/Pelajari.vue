@@ -42,6 +42,7 @@
     </div>
    
     <Footer />
+    <ScrollButton />
 
    </div>
 </template>
@@ -50,12 +51,16 @@
 import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import Card from "../../components/Card.vue";
+import ScrollButton from "../../components/ScrollButton.vue";
+
+
 export default {
     name : "Pelajari",
   components: {
     Header,
     Footer,
     Card,
+    ScrollButton,
   },
   
 };  

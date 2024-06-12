@@ -19,14 +19,14 @@
         akademisi, dan mitra pembangunan untuk masa depan yang lebih transparan
         dan partisipatif.
       </h3>
-      <a href="#" class="cursor-pointer z-1000">
+      <a href="#" class="">
         <button
           class="bg-primary-1 hover:bg-primary-2 text-white font-semibold py-2 px-6 rounded-full shadow-sm transition duration-300 shadow-primary-1 group mt-4 cursor-pointer relative"
         >
           Cari Tahu Lebih Lanjut
           <i
             data-feather="arrow-right"
-            class="bg-primary-1 text-white inline transition-all group-hover:bg-primary-2"
+            class="bg-primary-1 text-white inline transition-all group-hover:bg-primary-2 group-hover:translate-x-1"
           ></i>
         </button>
       </a>

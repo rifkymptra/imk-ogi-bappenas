@@ -8,11 +8,13 @@ import Home from './views/Home.vue';
 import App from './App.vue';
 import Pelajari from './views/Pelajari/Pelajari.vue';
 import Karir from './views/Pelajari/Karir.vue';
+import Publikasi from './views/Publikasi/Publikasi.vue';
 
 const routes = [
   { path: '/', component: Home },
   { path: '/pelajari', component: Pelajari }, 
-  { path: '/karir', component: Karir }
+  { path: '/karir', component: Karir },
+  { path: '/publikasi', component: Publikasi} 
 ];
 
 const router = createRouter({

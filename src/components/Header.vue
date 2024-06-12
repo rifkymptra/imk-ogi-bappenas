@@ -5,7 +5,7 @@
         <img src="../assets/Logo_Original.svg" alt="Logo" class="h-20" />
       </div>
       <nav class="flex space-x-4 items-center">
-        <a href="#" class="text-gray-800 font-semibold">Beranda</a>
+        <a href="/" class="text-gray-800 font-semibold">Beranda</a>
         <div class="relative group">
           <a href="#" class="text-gray-800 font-semibold flex items-center group">
             Rencana Aksi Nasional

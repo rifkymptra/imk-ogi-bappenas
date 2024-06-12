@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button @click="navigate">
     <div
       class="bg-white border-2 rounded-lg drop-shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
     >
@@ -19,7 +19,6 @@
   </button>
 </template>
   
-  
   <script>
 export default {
   name: "InfoCard",
@@ -31,6 +30,15 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    navigate() {
+      window.location.href = this.link;
     },
   },
 };

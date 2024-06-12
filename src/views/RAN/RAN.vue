@@ -22,11 +22,16 @@
         <InfoCard
           iconClass="/RAN/document.svg"
           title="Dokumen dan Publikasi Data"
+          link="/ran/Dokumen-dan-Publikasi-Data"
         />
         <InfoCard iconClass="/RAN/list.svg" title="Monitoring dan Evaluasi" />
       </div>
       <div v-if="infoCards.length % 2 !== 0" class="flex justify-center mt-4">
-        <InfoCard iconClass="/RAN/lock.svg" title="Komitmen RAN OGI VII" />
+        <InfoCard
+          iconClass="/RAN/lock.svg"
+          title="Komitmen RAN OGI VII"
+          link="/ran/komitmen"
+        />
       </div>
     </div>
     <Footer />

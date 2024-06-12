@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-neutral1 text-white py-10 absolute w-full bottom-0">
+  <footer class="bg-neutral-1 text-white py-10 w-full bottom-0">
     <div class="container mx-auto flex flex-wrap justify-between">
       <div class="w-full md:w-1/4 mb-6 md:mb-0">
         <img src="../assets/logo2.svg" alt="Logo" class="md:w-1/2 ml-16 mb-4" />
-        <p class="text-neutral5 ml-16">
+        <p class="text-neutral-5 ml-16">
           Open Government Indonesia (OGI) merupakan sebuah gerakan keterbukaan
           dan partisipasi melalui kolaborasi inovatif.
         </p>
@@ -29,21 +29,21 @@
       <div class="w-full md:w-1/4 mb-6 md:mb-0 pl-11">
         <h2 class="font-semibold mb-4">Kontak Info</h2>
         <h2 class="font-semibold">Alamat</h2>
-        <p class="text-neutral5 mb-4">
+        <p class="text-neutral-5 mb-4">
           Jl. Taman Suropati No.2 Menteng, Jakarta Pusat 10310
         </p>
         <h2 class="font-semibold">Telepon</h2>
-        <p class="text-neutral5 mb-4">
+        <p class="text-neutral-5 mb-4">
           (62-21) 3148551 ext . 3504, 3503
         </p>
         <h2 class="font-semibold">Email</h2>
-        <p class="text-neutral5">
+        <p class="text-neutral-5">
           sekretariat.ogi@bappenas.go.id
         </p>
       </div>
       <div class="w-full md:w-1/4 mb-6 md:mb-0 ">
         <h2 class="font-semibold mb-4 ml-11">Eksplorasi</h2>
-        <ul class="text-neutral5 ml-11">
+        <ul class="text-neutral-5 ml-11">
           <li class="mb-2">
             <a href="#" class="hover:text-white">Tentang Kami</a>
           </li>
@@ -61,7 +61,7 @@
       </div>
       <div class="w-full md:w-1/4">
         <h2 class="font-semibold mb-4 ">Tautan Lainnya</h2>
-        <ul class="text-neutral5">
+        <ul class="text-neutral-5">
           <li class="mb-2">
             <a href="#" class="hover:text-white">BAPPENAS</a>
           </li>
@@ -82,8 +82,8 @@
         </ul>
       </div>
     </div>
-    <div class="border-t border-neutral3 mt-6 pt-4 mx-28">
-      <p class="text-center text-neutral5">
+    <div class="border-t border-neutral-3 mt-6 pt-4 mx-28">
+      <p class="text-center text-neutral-5">
         Hak Cipta © 2022 Open Government Indonesia
       </p>
     </div>

@@ -6,9 +6,11 @@ import feather from 'feather-icons';
 
 import Home from './views/Home.vue';
 import App from './App.vue';
+import Pelajari from './views/Pelajari.vue';
 
 const routes = [
-  { path: '/', component: Home }
+  { path: '/', component: Home },
+  { path: '/pelajari', component: Pelajari } 
 ];
 
 const router = createRouter({

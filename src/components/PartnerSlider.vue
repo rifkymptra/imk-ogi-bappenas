@@ -1,15 +1,15 @@
 <template>
   <div
-    class="partner-slider bg-neutral-800 text-center text-white py-12 rounded-3xl relative"
+    class="partner-slider bg-neutral-1 text-center text-white py-12 rounded-3xl relative overflow-hidden mx-12"
   >
-    <h2 class="text-4xl font-bold mb-4">
+    <h2 class="text-[3.5rem] font-bold mb-4">
       Kenali <span class="text-red-500">mitra masyarakat</span> OGI
     </h2>
     <p class="text-lg mb-6 max-w-3xl mx-auto">
       Mitra masyarakat OGI berkomitmen mendorong partisipasi publik untuk
       menciptakan pemerintahan yang lebih transparan dan akuntabel.
     </p>
-    <div class="overflow-hidden relative mx-auto max-w-full">
+    <div class="overflow-hidden relative ml-24 max-w-full z-10">
       <div
         class="flex transition-transform duration-500"
         :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -32,7 +32,7 @@
               />
             </div>
           </div>
-          <div class="grid grid-cols-4 justify-center">
+          <div class="grid grid-cols-4 justify-center ml-24">
             <div
               v-for="(partner, i) in group.slice(6, 10)"
               :key="i"
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div
-      class="flex justify-between absolute inset-y-1/2 w-full px-4 transform -translate-y-1/2"
+      class="flex justify-between absolute inset-y-1/2 w-full px-4 transform -translate-y-1/2 z-20"
     >
       <button @click="prevSlide" class="text-4xl text-white focus:outline-none">
         &#10094;
@@ -71,14 +71,14 @@
       ></span>
     </div>
     <img
-      src="../assets/dekorasi-kiri.png"
+      src="../assets/grafik-home-3.png"
       alt=""
-      class="absolute bottom-0 left-0 w-32"
+      class="absolute -bottom-36 -left-36 w-1/4 z-0"
     />
     <img
-      src="../assets/dekorasi-kanan.png"
+      src="../assets/grafik-home-3.png"
       alt=""
-      class="absolute top-0 right-0 w-32"
+      class="absolute -bottom-36 -right-36 w-1/4 z-0"
     />
   </div>
 </template>

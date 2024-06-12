@@ -9,6 +9,8 @@ import App from './App.vue';
 import Pelajari from './views/Pelajari/Pelajari.vue';
 import Karir from './views/Pelajari/Karir.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
+import RAN from './views/RAN/RAN.vue';
+import Komitmen from './views/RAN/Komitmen.vue';
 import News from './views/Publikasi/News.vue'
 
 const routes = [
@@ -16,7 +18,9 @@ const routes = [
   { path: '/pelajari', component: Pelajari }, 
   { path: '/karir', component: Karir },
   { path: '/publikasi', component: Publikasi},
-  { path: '/publikasi/ogi-news', component: News}
+  { path: '/publikasi/ogi-news', component: News},
+  { path: '/ran', component: RAN},
+  { path: '/ran/komitmen', component: Komitmen}
 ];
 
 const router = createRouter({

@@ -2,10 +2,10 @@
   <div
     class="partner-slider bg-neutral-5/25 my-12 text-center text-white py-12 rounded-3xl relative mx-12 overflow-hidden"
   >
-    <h2 class="text-[56px] font-bold text-neutral-1">
+    <h2 class="text-[3.5rem] font-bold text-neutral-1">
       Selain mitra masyarakat,
     </h2>
-    <h2 class="text-[56px] font-bold text-neutral-1 mb-4">
+    <h2 class="text-[3.5rem] font-bold text-neutral-1 mb-4">
       Ada juga <span class="text-red-500">mitra pemerintah</span> OGI
     </h2>
     <p class="text-lg mb-6 max-w-3xl mx-auto text-neutral-1">
@@ -38,7 +38,7 @@
       </div>
     </div>
     <div
-      class="flex justify-between absolute inset-y-2/3 w-full px-4 transform -translate-y-1/2"
+      class="flex justify-between absolute inset-y-2/3 w-full px-4 transform -translate-y-1/2 z-20"
     >
       <button
         @click="prevSlide"

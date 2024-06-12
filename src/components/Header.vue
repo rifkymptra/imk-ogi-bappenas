@@ -21,7 +21,7 @@ export default {
   <header class="bg-white border-b font-jakarta fixed w-full top-0 z-50">
     <div class="container mx-auto px-4 flex items-center justify-between">
       <div class="flex items-center space-x-4">
-        <img src="../assets/logo.png" alt="Logo" class="h-20" />
+        <img src="../assets/Logo_Original.svg" alt="Logo" class="h-20" />
       </div>
       <nav class="flex space-x-4">
         <a href="#" class="text-gray-800 font-semibold">Beranda</a>

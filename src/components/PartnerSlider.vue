@@ -2,14 +2,14 @@
   <div
     class="partner-slider bg-neutral-800 text-center text-white py-12 rounded-3xl relative"
   >
-    <h2 class="text-4xl font-bold mb-4">
+    <h2 class="text-[3.5rem] font-bold mb-4">
       Kenali <span class="text-red-500">mitra masyarakat</span> OGI
     </h2>
     <p class="text-lg mb-6 max-w-3xl mx-auto">
       Mitra masyarakat OGI berkomitmen mendorong partisipasi publik untuk
       menciptakan pemerintahan yang lebih transparan dan akuntabel.
     </p>
-    <div class="overflow-hidden relative mx-auto max-w-full">
+    <div class="overflow-hidden relative ml-24 max-w-full">
       <div
         class="flex transition-transform duration-500"
         :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -32,7 +32,7 @@
               />
             </div>
           </div>
-          <div class="grid grid-cols-4 justify-center">
+          <div class="grid grid-cols-4 justify-center ml-">
             <div
               v-for="(partner, i) in group.slice(6, 10)"
               :key="i"

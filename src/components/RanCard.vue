@@ -1,10 +1,10 @@
 <template>
   <!-- RAN Card -->
   <div
-    class="bg-primary-5/10 max-h-[calc(130vh)] pt-12 mt-36 mx-16 rounded-3xl overflow-hidden relative"
+    class="bg-primary-5/10 max-h-[50rem] pt-12 mt-36 mx-16 rounded-3xl overflow-hidden relative"
   >
     <div class="container mx-auto text-center relative">
-      <h2 class="text-4xl font-bold mb-4 text-primary-1">
+      <h2 class="text-[3.5rem] font-bold mb-4 text-primary-1">
         <span class="text-neutral-1">Apa itu</span> Rencana Aksi Nasional (RAN)?
       </h2>
       <p class="text-lg mb-6 max-w-3xl mx-auto text-neutral-1">

@@ -5,8 +5,10 @@
       <TitleSection 
         link="/publikasi" 
         linkText="PUBLIKASI OGI" 
-        heading="OGI"
-        subheading="News" 
+        heading="OGI "
+        subheading="News"
+        :headingPrimary="false"
+        :subheadingPrimary="true"
       />
       <div class="container mx-auto flex justify-center mt-5 px-4">
         <div class="w-full" style="max-width: 1166px; position: relative;">

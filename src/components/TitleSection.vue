@@ -6,7 +6,8 @@
         {{ linkText }}
       </a>
       <h1 class="text-[4.5rem] font-bold my-5">
-        {{ heading }} <span class="text-primary-1">{{ subheading }}</span>
+        <span :class="headingClass">{{ heading }}</span>
+        <span :class="subheadingClass">{{ subheading }}</span>
       </h1>
     </div>
   </template>
@@ -30,16 +31,30 @@
       subheading: {
         type: String,
         required: true
+      },
+      headingPrimary: {
+        type: Boolean,
+        default: false
+      },
+      subheadingPrimary: {
+        type: Boolean,
+        default: true
+      }
+    },
+    computed: {
+      headingClass() {
+        return this.headingPrimary ? 'text-primary-1' : '';
+      },
+      subheadingClass() {
+        return this.subheadingPrimary ? 'text-primary-1' : '';
       }
     },
     mounted() {
       // Initialize Feather icons
       this.$nextTick(() => {
-        this.$feather.replace()
+        this.$feather.replace();
       });
     }
   };
   </script>
-  
-
   

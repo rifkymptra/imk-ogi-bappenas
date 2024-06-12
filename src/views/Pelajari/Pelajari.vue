@@ -2,8 +2,8 @@
    <div id = "app">
     <Header />
     <div class="container mx-auto">
-      <div class="h-[calc(20vh)]"></div>
-      <h1 class="text-4xl font-bold my-5 text-center">
+        <div class="h-[calc(20vh)]"></div>
+        <h1 class="text-[3.5rem] font-bold my-5 text-center">
             Pelajari tentang <span class="text-primary-1">OGI</span></h1>
         
       <div class="my-5 flex justify-center items-center min-h-screen">

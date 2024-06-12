@@ -13,7 +13,7 @@
             title="OGI News"
             description="Baca berita terkini terkait OGI."
             linkText="Baca lebih lanjut"
-            link="#"
+            link="/publikasi/ogi-news"
           />
           <Card
             image="/src/assets/infografis.jpg"

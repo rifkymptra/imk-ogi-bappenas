@@ -48,8 +48,8 @@
 
     <!-- Tim Pengarah -->
     <div class="container mx-auto py-12 text-center max-w-5xl">
-      <h2 class="text-4xl font-bold mb-4">
-        Siapa <span class="text-red-500">tim pengarah</span> OGI? 👀
+      <h2 class="text-5xl font-bold mb-4">
+        Siapa <span class="text-primary-1">tim pengarah</span> OGI? 👀
       </h2>
       <p class="text-lg mb-8">
         Tim Pengarah OGI memberikan arahan strategis untuk mendorong
@@ -95,14 +95,14 @@
     <!-- Social Media -->
     <div class="py-12">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-neutral-1">
+        <h2 class="text-[3.5rem] font-bold text-neutral-1">
           Ikuti jejak sosial kami
         </h2>
       </div>
       <div class="flex justify-center space-x-12">
         <!-- Facebook Card -->
         <div
-          class="bg-white rounded-2xl p-6 text-center w-96 drop-shadow-xl max-h-[390px] overflow-hidden"
+          class="bg-white rounded-2xl p-6 text-center w-96 drop-shadow-xl max-h-[390px] overflow-hidden border-2"
         >
           <div
             class="flex justify-center items-center mb-4 bg-red-100 rounded-full w-24 h-24 mx-auto"
@@ -145,7 +145,7 @@
         </div>
         <!-- Twitter Card -->
         <div
-          class="bg-white rounded-2xl drop-shadow-xl p-6 text-center w-96 max-h-[390px] overflow-hidden"
+          class="bg-white rounded-2xl drop-shadow-xl p-6 text-center w-96 max-h-[390px] overflow-hidden border-2"
         >
           <div
             class="flex justify-center items-center mb-4 bg-red-100 rounded-full w-24 h-24 mx-auto"
@@ -180,7 +180,7 @@
         </div>
         <!-- Instagram Card -->
         <div
-          class="bg-white rounded-2xl drop-shadow-xl p-6 text-center w-96 max-h-[390px] overflow-hidden"
+          class="bg-white rounded-2xl drop-shadow-xl p-6 text-center w-96 max-h-[390px] overflow-hidden border-2"
         >
           <div
             class="flex justify-center items-center mb-4 bg-red-100 rounded-full w-24 h-24 mx-auto"
@@ -224,6 +224,10 @@
       </div>
     </div>
 
+    <Footer />
+
+    <ScrollButton />
+
     <!-- <div class="h-[calc(100vh*2)]"></div> -->
   </div>
 </template>
@@ -234,6 +238,7 @@ import LogoCard from "../components/LogoCard.vue";
 import PartnerSlider from "../components/PartnerSlider.vue";
 import GovSlider from "../components/GovSlider.vue";
 import RanCard from "../components/RanCard.vue";
+import ScrollButton from "../components/ScrollButton.vue";
 
 export default {
   components: {
@@ -243,6 +248,7 @@ export default {
     PartnerSlider,
     GovSlider,
     RanCard,
+    ScrollButton,
   },
 
   data() {

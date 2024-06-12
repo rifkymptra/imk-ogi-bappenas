@@ -9,12 +9,14 @@ import App from './App.vue';
 import Pelajari from './views/Pelajari/Pelajari.vue';
 import Karir from './views/Pelajari/Karir.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
+import Perjalanan from './views/Pelajari/Perjalanan.vue';
 
 const routes = [
   { path: '/', component: Home },
   { path: '/pelajari', component: Pelajari }, 
   { path: '/karir', component: Karir },
-  { path: '/publikasi', component: Publikasi} 
+  { path: '/publikasi', component: Publikasi},
+  { path: '/perjalanan', component: Perjalanan}
 ];
 
 const router = createRouter({

@@ -32,6 +32,8 @@ const router = createRouter({
 
 const app = createApp(App);
 
+app.config.globalProperties.$feather = feather;
+
 app.use(router);
 
 app.mount('#app');

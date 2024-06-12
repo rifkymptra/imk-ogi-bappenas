@@ -1,36 +1,17 @@
-<script>
-import feather from "feather-icons";
-export default {
-  data() {
-    return {
-      showMenu: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.showMenu = !this.showMenu;
-    },
-  },
-  mounted() {
-    feather.replace();
-  },
-};
-</script>
-
 <template>
   <header class="bg-white border-b font-jakarta fixed w-full top-0 z-50">
     <div class="container mx-auto px-4 flex items-center justify-between">
       <div class="flex items-center space-x-4">
         <img src="../assets/Logo_Original.svg" alt="Logo" class="h-20" />
       </div>
-      <nav class="flex space-x-4">
+      <nav class="flex space-x-4 items-center">
         <a href="#" class="text-gray-800 font-semibold">Beranda</a>
         <div class="relative group">
-          <a href="#" class="text-gray-800 font-semibold group"
-            >Rencana Aksi Nasional
+          <a href="#" class="text-gray-800 font-semibold flex items-center group">
+            Rencana Aksi Nasional
             <i
               data-feather="chevron-down"
-              class="bg-white mr-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180 inline"
+              class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180"
             ></i>
           </a>
           <div
@@ -41,11 +22,11 @@ export default {
           </div>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-800 font-semibold group"
-            >Publikasi
+          <a href="#" class="text-gray-800 font-semibold flex items-center group">
+            Publikasi
             <i
               data-feather="chevron-down"
-              class="bg-white mr-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180 inline"
+              class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180"
             ></i>
           </a>
           <div
@@ -56,11 +37,11 @@ export default {
           </div>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-800 font-semibold group"
-            >Pelajari
+          <a href="#" class="text-gray-800 font-semibold flex items-center group">
+            Pelajari
             <i
               data-feather="chevron-down"
-              class="bg-white mr-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180 inline"
+              class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180"
             ></i>
           </a>
           <div
@@ -73,9 +54,9 @@ export default {
       </nav>
       <div class="flex items-center space-x-4">
         <button class="text-gray-800">
-          <i data-feather="search" class="bg-white text-red-500 h-6 w-6"></i>
+          <i data-feather="search" class="text-red-500 h-6 w-6"></i>
         </button>
-        <button class="flag text-gray-800" @click="toggleMenu">
+        <button class="flag text-gray-800 relative" @click="toggleMenu">
           <span class="flex items-center">
             <img
               src="../assets/indonesia.png"
@@ -84,7 +65,7 @@ export default {
             />
             <i
               data-feather="chevron-down"
-              class="bg-white mr-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180 inline"
+              class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300"
             ></i>
           </span>
         </button>
@@ -111,3 +92,21 @@ export default {
   </header>
 </template>
 
+<script>
+import feather from "feather-icons";
+export default {
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
+  },
+  mounted() {
+    feather.replace();
+  },
+};
+</script>

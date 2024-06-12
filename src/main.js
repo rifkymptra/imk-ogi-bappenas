@@ -7,10 +7,12 @@ import feather from 'feather-icons';
 import Home from './views/Home.vue';
 import App from './App.vue';
 import Pelajari from './views/Pelajari.vue';
+import Publikasi from './views/Publikasi/Publikasi.vue';
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/pelajari', component: Pelajari } 
+  { path: '/pelajari', component: Pelajari },
+  { path: '/publikasi', component: Publikasi} 
 ];
 
 const router = createRouter({

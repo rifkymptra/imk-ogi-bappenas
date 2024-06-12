@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily: {
       'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+      'inter': ['Inter', 'sans-serif'],
     },
     extend: {
       colors: {

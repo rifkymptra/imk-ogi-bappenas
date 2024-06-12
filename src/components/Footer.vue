@@ -7,7 +7,7 @@
           Open Government Indonesia (OGI) merupakan sebuah gerakan keterbukaan
           dan partisipasi melalui kolaborasi inovatif.
         </p>
-        <div class="flex  ml-16 mt-16">
+        <div class="flex ml-16 mt-16">
           <a href="#" class="mr-4">
             <img src="../assets/Facebook.svg" alt="Facebook" class="h-9" />
           </a>
@@ -15,11 +15,7 @@
             <img src="../assets/Twitter.svg" alt="Twitter" class="h-9" />
           </a>
           <a href="#" class="mr-4">
-            <img
-              src="../assets/Instagram.svg"
-              alt="Instagram"
-              class="h-9"
-            />
+            <img src="../assets/Instagram.svg" alt="Instagram" class="h-9" />
           </a>
           <a href="#">
             <img src="../assets/Youtube.svg" alt="YouTube" class="h-9" />
@@ -41,7 +37,7 @@
           sekretariat.ogi@bappenas.go.id
         </p>
       </div>
-      <div class="w-full md:w-1/4 mb-6 md:mb-0 ">
+      <div class="w-full md:w-1/4 mb-6 md:mb-0">
         <h2 class="font-semibold mb-4 ml-11">Eksplorasi</h2>
         <ul class="text-neutral-5 ml-11">
           <li class="mb-2">

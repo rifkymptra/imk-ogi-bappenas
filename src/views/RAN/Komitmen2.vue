@@ -71,7 +71,7 @@
               <td class="py-2 px-4"></td>
               <td class="py-2 px-4 text-center">
                 <button
-                  class="bg-primary-1 text-white py-1 px-3 rounded text-xs whitespace-nowrap"
+                  class="bg-primary-1 text-white py-1 px-3 rounded-md text-xs whitespace-nowrap"
                 >
                   Lihat
                 </button>
@@ -85,7 +85,7 @@
               <td class="py-2 px-4"></td>
               <td class="py-2 px-4 text-center">
                 <button
-                  class="bg-primary-1 text-white py-1 px-3 rounded text-xs whitespace-nowrap"
+                  class="bg-primary-1 text-white py-1 px-3 rounded-md text-xs whitespace-nowrap"
                 >
                   Lihat
                 </button>

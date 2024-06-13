@@ -1,10 +1,10 @@
 <template>
   <Header />
-  <div class="container mx-auto text-center h-[1000vh]">
+  <div class="container mx-auto text-center max-w-fit pb-8 mt-16">
     <TitleSection
       link="/ran"
       linkText="RENCANA AKSI NASIONAL"
-      heading="Komitmen"
+      heading="Komitmen "
       subheading="RAN OGI VII"
     />
     <div class="mb-8 max-w-[59rem] mx-auto font-inter text-xl">
@@ -28,7 +28,7 @@
     />
     <KomitmenList
       title="Optimalisasi implementasi keterbukaan data benefical ownership"
-      textToAdd="mweehehehehe"
+      textToAdd="Komitmen ini berupaya untuk melakukan penyediaan data Beneficial Ownership yang mutakhir melalui pelaksanaan verifikasi dan pemanfaatan data Beneficial Ownership"
       number="2"
     />
     <KomitmenList

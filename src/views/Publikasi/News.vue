@@ -20,10 +20,10 @@
             <div class="w-1/4 p-4">
                 <div class="bg-white shadow rounded p-4">
                     <h2 class="text-xl font-bold mb-4">Urutkan Berdasarkan</h2>
-                    <div class="mb-4 flex space-x-4">
-                        <button class="text-red-500 font-bold focus:outline-none">Relevansi</button>
-                        <button class="focus:outline-none">Terbaru</button>
-                        <button class="focus:outline-none">Paling Banyak Dibaca</button>
+                    <div class="mb-4">
+                        <button class="text-red-500 font-bold">Relevansi</button>
+                        <button class="ml-4">Terbaru</button>
+                        <button class="ml-4">Paling Banyak Dibaca</button>
                     </div>
                     <h2 class="text-xl font-bold mb-4">Kategori</h2>
                     <select class="w-full mb-4 p-2 border rounded">
@@ -32,18 +32,10 @@
                         <option>Kategori 2</option>
                     </select>
                     <h2 class="text-xl font-bold mb-4">Tahun</h2>
-                    <vue-slider
-                        v-model="yearRange"
-                        :min="2013"
-                        :max="2024"
-                        :interval="1"
-                        :dotSize="16"
-                        :sliderSize="4"
-                        class="mb-4"
-                    ></vue-slider>
-                    <div class="flex justify-between text-sm mb-4">
-                        <span>{{ yearRange[0] }}</span>
-                        <span>{{ yearRange[1] }}</span>
+                    <input type="range" min="2013" max="2024" class="w-full mb-4" />
+                    <div class="flex justify-between text-sm">
+                        <span>2013</span>
+                        <span>2024</span>
                     </div>
                     <button class="w-full bg-red-500 text-white py-2 rounded">Terapkan</button>
                 </div>
@@ -69,8 +61,6 @@ import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import TitleSection from "../../components/TitleSection.vue";
 import SearchBar from "../../components/SearchBar.vue"; // Adjust the path as needed
-import VueSlider from 'vue-slider-component';
-import 'vue-slider-component/theme/default.css';
 
 export default {
     name: "Publikasi",
@@ -79,11 +69,9 @@ export default {
         Footer,
         TitleSection,
         SearchBar,
-        VueSlider
     },
     data() {
         return {
-            yearRange: [2013, 2024],
             items: [
                 {
                     title: "Laporan Pelaksanaan Rencana Aksi Nasional Keterbukaan Pemerintah 2020-2022",
@@ -110,3 +98,7 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+/* Add any custom styles here */
+</style>

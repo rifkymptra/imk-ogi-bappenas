@@ -3,6 +3,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import './style.css';
 import feather from 'feather-icons';
+import '@vueform/slider/themes/default.css';
 
 import Home from './views/Home.vue';
 import App from './App.vue';

@@ -1,7 +1,7 @@
 <template>
   <details @toggle="toggleOpen" :open="isOpen" class="bg-white border-2 rounded-lg drop-shadow-lg p-4 hover:shadow-lg transition-shadow duration-300 flex mx-28">
     <summary class="flex items-center justify-between font-semibold cursor-pointer list-none">
-      <span class="year-label text-primary-1 ml-6 text-15px">{{ title }}</span>
+      <span class="year-label text-primary-1 ml-6 font-bold" :style="{ fontSize : '25px'}">{{ title }}</span>
       <span ref="icon" class="transform transition-transform duration-200"></span>
     </summary>
     <div v-show="isOpen" class="details-content mt-4" :style= "{ fontSize : '15px'}  ">
@@ -52,13 +52,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.year-label {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.details-content {
-  margin-left: 1.5rem;
-}
-</style>

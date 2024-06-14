@@ -3,7 +3,7 @@
     <Header />
     <div class="container mx-auto">
         <div class="h-[calc(12vh)]"></div>
-        <h1 class="text-[3.5rem] font-bold my-5 text-center">
+        <h1 class="text-[3.5rem] font-bold my-5 text-center font-jakarta" :style="{fontSize : '56px'}">
             Pelajari tentang <span class="text-primary-1">OGI</span></h1>
         
       <div class="my-5 flex justify-center items-center min-h-screen">
@@ -13,7 +13,7 @@
           title="Tentang Kami" 
           description="Pelajari Open Government Indonesia secara lebih detail."
           linkText="Baca lebih lanjut"
-          link="#"
+          link="/pelajari/perjalanan"
           />
           <Card 
           image="/src/assets/foto-2.png" 
@@ -27,7 +27,7 @@
           title="Kegiatan Kami" 
           description="Kepoin kegiatan-kegiatan yang sudah kami lakukan di OGI."
           linkText="Lihat kegiatan"
-          link="/pelajari/perjalanan"
+          link="#"
           />
           <Card 
           image="/src/assets/foto-4.png" 

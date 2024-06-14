@@ -6,11 +6,11 @@
       <div class="text-center">
         <TitleSection 
           link="/pelajari" 
-          linkText="PELAJARi" 
+          linkText="PELAJARI" 
           heading="Perjalanan " 
-          subheading="Singkat OGI" 
+          subheading1="Singkat OGI" 
           :headingPrimary="true"
-          :subheadingPrimary="false"
+          :subheading1Primary="false"
         />
         <p class="text-black font-inter" :style="{ fontSize: '20px' }">
           Kolaborasi antara Pemerintah Indonesia dan Organisasi Masyarakat Sipil (OMS) untuk melahirkan <br>

@@ -6,11 +6,11 @@
         <div class="text-center">
             <TitleSection 
               link="/pelajari" 
-              linkText="PELAJARi" 
+              linkText="PELAJARI" 
               heading="Karir " 
-              subheading="OGI" 
+              subheading1="OGI" 
               :headingPrimary="true"
-              :subheadingPrimary="false" 
+              :subheading1Primary="false" 
             />
             <p class="text-black font-inter" :style="{ fontSize: '20px' }">Gabung bersama Open Government Indonesia (OGI) 
                 untuk membantu dalam wujudkan <br> 

@@ -1,104 +1,137 @@
 <template>
     <div id="app">
-        <!-- Header Navbar -->
-        <Header />
-
-        <!-- Title Section -->
-        <div class="h-[calc(5vh)]"></div>
-        <TitleSection link="/publikasi" linkText="PUBLIKASI OGI" heading="OGI " subheading1="News " :headingPrimary="false"
-            :subheading1Primary="true"/>
-
-        <!-- Search Bar -->
-        <div class="container mx-auto flex justify-center mt-5 px-4">
-            <SearchBar placeholder="Cari Berita OGI" customClasses="" maxWidth="1166px" />
-        </div>
-        <div class="h-[calc(5vh)]"></div>
-
-        <!-- Main Content -->
-        <div class="container mx-auto flex px-4">
-            <!-- Filter Panel -->
-            <div class="w-1/4 p-4">
-                <div class="bg-white shadow rounded p-4">
-                    <h2 class="text-xl font-bold mb-4">Urutkan Berdasarkan</h2>
-                    <div class="mb-4">
-                        <button class="text-red-500 font-bold">Relevansi</button>
-                        <button class="ml-4">Terbaru</button>
-                        <button class="ml-4">Paling Banyak Dibaca</button>
-                    </div>
-                    <h2 class="text-xl font-bold mb-4">Kategori</h2>
-                    <select class="w-full mb-4 p-2 border rounded">
-                        <option>Semua</option>
-                        <option>Kategori 1</option>
-                        <option>Kategori 2</option>
-                    </select>
-                    <h2 class="text-xl font-bold mb-4">Tahun</h2>
-                    <input type="range" min="2013" max="2024" class="w-full mb-4" />
-                    <div class="flex justify-between text-sm">
-                        <span>2013</span>
-                        <span>2024</span>
-                    </div>
-                    <button class="w-full bg-red-500 text-white py-2 rounded">Terapkan</button>
-                </div>
+      <!-- Header Navbar -->
+      <Header />
+  
+      <!-- Title Section -->
+      <div class="h-[calc(5vh)]"></div>
+      <TitleSection
+        link="/publikasi"
+        linkText="PUBLIKASI OGI"
+        heading="OGI "
+        subheading1="News"
+        :headingPrimary="false"
+        :subheading1Primary="true"
+      />
+  
+      <!-- Search Bar -->
+      <div class="container mx-auto flex justify-center mt-5 px-4">
+        <SearchBar placeholder="Telusuri" customClasses="" maxWidth="1166px" />
+      </div>
+      <div class="h-[calc(5vh)]"></div>
+  
+      <!-- Filters and Sorting -->
+      <div class="container mx-auto px-4 flex">
+        <div class="w-1/4 pr-4">
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">Urutkan Berdasarkan</label>
+            <div class="flex space-x-2 mt-2">
+              <button @click="sortReports('relevance')" :class="{'bg-red-500 text-white rounded-full': sortBy === 'relevance'}" class="px-4 py-2 border rounded-full">Relevansi</button>
+              <button @click="sortReports('newest')" :class="{'bg-red-500 text-white rounded-full': sortBy === 'newest'}" class="px-4 py-2 border rounded-full">Terbaru</button>
+              <button @click="sortReports('mostRead')" :class="{'bg-red-500 text-white rounded-full': sortBy === 'mostRead'}" class="px-4 py-2 border rounded-full">Paling Banyak Dibaca</button>
             </div>
-
-            <!-- Cards Display -->
-            <div class="w-3/4 p-4 grid grid-cols-1 gap-4">
-                <div v-for="(item, index) in items" :key="index" class="bg-white shadow rounded p-4">
-                    <h3 class="text-xl font-bold mb-2">{{ item.title }}</h3>
-                    <p class="text-gray-600 mb-2">{{ item.date }}</p>
-                    <button class="bg-red-500 text-white py-2 px-4 rounded">Unduh</button>
-                </div>
+          </div>
+  
+          <div class="mb-4">
+            <label for="category" class="block text-sm font-medium text-gray-700">Kategori Bahan Pustaka</label>
+            <select v-model="selectedCategory" @change="filterReports" class="border px-4 py-2 rounded w-full mt-2">
+              <option value="">Semua</option>
+              <option value="RAN">RAN</option>
+            </select>
+          </div>
+  
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">Tahun</label>
+            <Slider
+              v-model="yearRange"
+              :min="2013"
+              :max="2024"
+              :tooltip="'hover'"
+              :color="'#EF4444'"
+              @input="updateYearRange"
+            />
+            <div class="flex justify-between text-sm text-gray-600 mt-2">
+              <span>{{ yearRange[0] }}</span>
+              <span>{{ yearRange[1] }}</span>
             </div>
+            <button @click="filterReports" class="w-full px-4 py-2 bg-red-500 text-white rounded mt-2">Terapkan</button>
+          </div>
         </div>
-
-        <!-- Footer -->
-        <Footer />
+  
+        <!-- Report List -->
+        <div class="w-3/4">
+          <div v-for="report in filteredReports" :key="report.title" class="mb-5">
+            <div class="p-5 border border-gray-300 rounded-lg">
+              <h2 class="text-xl font-bold mb-2">{{ report.title }}</h2>
+              <p class="text-sm text-gray-500">{{ report.date }} · {{ report.views }} views</p>
+              <button @click="downloadReport(report.link)" class="mt-3 px-4 py-2 bg-red-500 text-white rounded">
+                Unduh
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Footer -->
+      <Footer />
     </div>
-</template>
-
-<script>
-import Header from "../../components/Header.vue";
-import Footer from "../../components/Footer.vue";
-import TitleSection from "../../components/TitleSection.vue";
-import SearchBar from "../../components/SearchBar.vue"; // Adjust the path as needed
-
-export default {
+  </template>
+  
+  <script>
+  import Header from "../../components/Header.vue";
+  import Footer from "../../components/Footer.vue";
+  import TitleSection from "../../components/TitleSection.vue";
+  import SearchBar from "../../components/SearchBar.vue";
+  import { fetchReports } from "../../data/ReportController.js";
+  import Slider from '@vueform/slider';
+  
+  export default {
     name: "Publikasi",
     components: {
-        Header,
-        Footer,
-        TitleSection,
-        SearchBar,
+      Header,
+      Footer,
+      TitleSection,
+      SearchBar,
+      Slider
     },
     data() {
-        return {
-            items: [
-                {
-                    title: "Laporan Pelaksanaan Rencana Aksi Nasional Keterbukaan Pemerintah 2020-2022",
-                    date: "31 December 2022",
-                },
-                {
-                    title: "Laporan Pelaksanaan Rencana Aksi Nasional Keterbukaan Pemerintah 2018-2020",
-                    date: "31 December 2020",
-                },
-                {
-                    title: "Laporan Pelaksanaan Rencana Aksi Open Government Indonesia Tahun 2017",
-                    date: "31 December 2017",
-                },
-                {
-                    title: "Laporan Pelaksanaan Rencana Aksi Open Government Indonesia Tahun 2016",
-                    date: "31 December 2016",
-                },
-                {
-                    title: "Understanding the Gap Between Policy Formulations and Implementation in Collaborative Governance Mechanism",
-                    date: "31 December 2022",
-                },
-            ],
-        };
+      return {
+        reports: [],
+        filteredReports: [],
+        yearRange: [2013, 2024],
+        sortBy: 'newest',
+        selectedCategory: ''
+      };
     },
-};
-</script>
-
-<style scoped>
-/* Add any custom styles here */
-</style>
+    async created() {
+      this.reports = await fetchReports();
+      this.filteredReports = this.reports;
+    },
+    methods: {
+      async filterReports() {
+        let reports = await fetchReports();
+        reports = reports.filter(report => report.year >= this.yearRange[0] && report.year <= this.yearRange[1]);
+        if (this.selectedCategory) {
+          reports = reports.filter(report => report.category === this.selectedCategory);
+        }
+        this.filteredReports = reports;
+      },
+      sortReports(criteria) {
+        this.sortBy = criteria;
+        if (criteria === 'newest') {
+          this.filteredReports.sort((a, b) => b.year - a.year);
+        } else if (criteria === 'mostRead') {
+          this.filteredReports.sort((a, b) => b.views - a.views);
+        }
+      },
+      downloadReport(link) {
+        window.location.href = link;
+      },
+      updateYearRange() {
+        if (this.yearRange[0] > this.yearRange[1]) {
+          this.yearRange = [this.yearRange[1], this.yearRange[0]];
+        }
+      }
+    }
+  };
+  </script>

@@ -14,6 +14,9 @@ import Perjalanan from './views/Pelajari/Perjalanan.vue';
 import RAN from './views/RAN/RAN.vue';
 import Komitmen from './views/RAN/Komitmen.vue';
 import News from './views/Publikasi/News.vue';
+import Komitmen2 from './views/RAN/Komitmen2.vue';
+import Monitoring from './views/RAN/Monitoring.vue';
+import Dokumen from './views/RAN/Dokumen.vue';
 import Sekretariat from './views/Pelajari/Sekretariat.vue';
 
 const routes = [
@@ -25,7 +28,10 @@ const routes = [
   { path: '/publikasi/ogi-news', component: News},
   { path: '/ran', component: RAN},
   { path: '/ran/komitmen', component: Komitmen},
-  { path: '/pelajari/sekretariat', component: Sekretariat}
+  { path: '/ran/komitmen/2', component: Komitmen2},
+  { path: '/ran/monitoring-dan-evaluasi', component: Monitoring},
+  { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen},
+  { path: '/pelajari/sekretariat', component: Sekretariat},
 ];
 
 const router = createRouter({

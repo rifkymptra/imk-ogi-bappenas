@@ -2,15 +2,17 @@
     <div id="app">
       <Header />
       <div class="container mx-auto">
- 
+        <div class="h-[calc(12vh)]"></div>
         <div class="text-center">
             <TitleSection 
-                link="/pelajari" 
-                linkText="PELAJARI" 
-                heading="Karir"
-                subheading="OGI" 
+              link="/pelajari" 
+              linkText="PELAJARi" 
+              heading="Karir " 
+              subheading="OGI" 
+              :headingPrimary="true"
+              :subheadingPrimary="false" 
             />
-            <p class="text-black font-inter">Gabung bersama Open Government Indonesia (OGI) 
+            <p class="text-black font-inter" :style="{ fontSize: '20px' }">Gabung bersama Open Government Indonesia (OGI) 
                 untuk membantu dalam wujudkan <br> 
                 pemerintahan yang inovatif, akuntabel, dan inklusif!  </p>
         </div>

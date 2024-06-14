@@ -2,7 +2,7 @@
    <div id = "app">
     <Header />
     <div class="container mx-auto">
-        <div class="h-[calc(20vh)]"></div>
+        <div class="h-[calc(12vh)]"></div>
         <h1 class="text-[3.5rem] font-bold my-5 text-center">
             Pelajari tentang <span class="text-primary-1">OGI</span></h1>
         
@@ -20,21 +20,21 @@
           title="Sekretariat Kami" 
           description="Kenali orang-orang yang ada di dalam sekretariat kami."
           linkText="Kenali sekretariat kami"
-          link="#"
+          link="/pelajari/sekretariat"
           />
           <Card 
           image="/src/assets/foto-3.png" 
           title="Kegiatan Kami" 
           description="Kepoin kegiatan-kegiatan yang sudah kami lakukan di OGI."
           linkText="Lihat kegiatan"
-          link="#"
+          link="/pelajari/perjalanan"
           />
           <Card 
           image="/src/assets/foto-4.png" 
           title="Karir OGI" 
           description="Gabung bersama tim OGI."
           linkText="Lihat lowongan"
-          link="#"
+          link="/pelajari/karir"
           />
         </div>
       </div>

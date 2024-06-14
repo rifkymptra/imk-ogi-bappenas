@@ -3,6 +3,7 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import './style.css';
 import feather from 'feather-icons';
+import '@vueform/slider/themes/default.css';
 
 import Home from './views/Home.vue';
 import App from './App.vue';
@@ -16,6 +17,7 @@ import News from './views/Publikasi/News.vue';
 import Komitmen2 from './views/RAN/Komitmen2.vue';
 import Monitoring from './views/RAN/Monitoring.vue';
 import Dokumen from './views/RAN/Dokumen.vue';
+import Sekretariat from './views/Pelajari/Sekretariat.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -28,7 +30,8 @@ const routes = [
   { path: '/ran/komitmen', component: Komitmen},
   { path: '/ran/komitmen/2', component: Komitmen2},
   { path: '/ran/monitoring-dan-evaluasi', component: Monitoring},
-  { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen}
+  { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen},
+  { path: '/pelajari/sekretariat', component: Sekretariat},
 ];
 
 const router = createRouter({

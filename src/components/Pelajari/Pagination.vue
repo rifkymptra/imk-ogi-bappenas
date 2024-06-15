@@ -5,7 +5,7 @@
       @click="$emit('prev-page')" 
       :disabled="currentPage === 1"
     >
-      <img src="../../assets/chevron-left.svg" alt="Previous" class="w-6 h-6"/>
+      <img src="../../assets/chevron-left.svg" alt="Previous" class="w-6 h-6 "/>
     </button>
     <button 
       v-for="page in totalPages" 

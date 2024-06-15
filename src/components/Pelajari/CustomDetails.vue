@@ -1,12 +1,14 @@
 <template>
   <details @toggle="toggleOpen" :open="isOpen" class="bg-white border-2 rounded-lg drop-shadow-lg p-4 hover:shadow-lg transition-shadow duration-300 flex mx-28">
-    <summary class="flex items-center justify-between font-semibold cursor-pointer list-none">
-      <span class="year-label text-primary-1 ml-6 font-bold" :style="{ fontSize : '25px'}">{{ title }}</span>
-      <span ref="icon" class="transform transition-transform duration-200"></span>
+    <summary class="flex flex-col font-semibold cursor-pointer list-none">
+      <div class="flex items-top justify-between w-full">
+        <span class="year-label text-primary-1 ml-6 font-bold" :style="{ fontSize: '25px' }">{{ title }}</span>
+        <span v-show="isOpen" class="details-content ml-5 mt-1" :style="{ fontSize: '15px' }">
+          <slot></slot>
+        </span>
+        <span ref="icon" class="transform transition-transform duration-200"></span>
+      </div>
     </summary>
-    <div v-show="isOpen" class="details-content mt-4 ml-6" :style= "{ fontSize : '15px'}  ">
-      <slot></slot>
-    </div>
   </details>
 </template>
 
@@ -52,3 +54,7 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+/* Add custom styles if needed */
+</style>

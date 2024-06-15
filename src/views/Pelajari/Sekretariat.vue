@@ -28,44 +28,47 @@
         </TeamSection>
 
         <TeamSection title="Pengurus Harian Open Government Indonesia" icon="briefcase">
-          <div class="grid grid-cols-2 gap-y-10 space-x-4" >
-          <TeamMemberCard 
-            class="ml-4"
-            photoSrc="/src/assets/sekre-1.png"
-            alt="Maharani Putri S.W."
-            name="Maharani Putri S.W."
-            role="Open Government Partnership Point of Contact for Indonesia"
-          />
-          <TeamMemberCard
-            photoSrc="/src/assets/sekre-2.png"
-            alt="Karina Apriliadhatin"
-            name="Karina Apriliadhatin"
-            role="Perencana"
-          />
-          <TeamMemberCard 
-            photoSrc="/src/assets/sekre-3.png"
-            alt="Theodorus Agustinus H."
-            name="Theodorus Agustinus H."
-            role="Tenaga Ahli Kebijakan Publik"
-          />
-          <TeamMemberCard
-            photoSrc="/src/assets/sekre-4.png"
-            name="Andrieta Rafaela A."
-            role="Tenaga Ahli Kebijakan Publik"
-          />
-          <TeamMemberCard 
-            photoSrc="/src/assets/sekre-5.png"
-            alt="Kiki Mulyawati"
-            name="Kiki Mulyawati"
-            role="Tenaga Ahli Web Developer"
-          />
-          <TeamMemberCard
-            photoSrc="/src/assets/sekre-6.png"
-            alt="Rabbania Aulia F."
-            name="Rabbania Aulia F."
-            role="Tenaga Pendukung Administrasi"
-          />
+          <div class="flex flex-col items-center">
+            <div class="grid grid-cols-2 gap-y-10 space-x-10 pt-4" >
+            <TeamMemberCard 
+              class="ml-10"
+              photoSrc="/src/assets/sekre-1.png"
+              alt="Maharani Putri S.W."
+              name="Maharani Putri S.W."
+              role="Open Government Partnership Point of Contact for Indonesia"
+            />
+            <TeamMemberCard
+              photoSrc="/src/assets/sekre-2.png"
+              alt="Karina Apriliadhatin"
+              name="Karina Apriliadhatin"
+              role="Perencana"
+            />
+            <TeamMemberCard 
+              photoSrc="/src/assets/sekre-3.png"
+              alt="Theodorus Agustinus H."
+              name="Theodorus Agustinus H."
+              role="Tenaga Ahli Kebijakan Publik"
+            />
+            <TeamMemberCard
+              photoSrc="/src/assets/sekre-4.png"
+              name="Andrieta Rafaela A."
+              role="Tenaga Ahli Kebijakan Publik"
+            />
+            <TeamMemberCard 
+              photoSrc="/src/assets/sekre-5.png"
+              alt="Kiki Mulyawati"
+              name="Kiki Mulyawati"
+              role="Tenaga Ahli Web Developer"
+            />
+            <TeamMemberCard
+              photoSrc="/src/assets/sekre-6.png"
+              alt="Rabbania Aulia F."
+              name="Rabbania Aulia F."
+              role="Tenaga Pendukung Administrasi"
+            />
+            </div>
           </div>
+          
           <div class="h-[calc(4vh)]"></div>
           
         </TeamSection>

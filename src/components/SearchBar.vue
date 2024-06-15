@@ -8,7 +8,7 @@
       />
       <button
         v-if="searchQuery"
-        class="absolute right-10 top-1/2 transform -translate-y-1/2 text-red-400 hover:text-red-600 focus:outline-none"
+        class="absolute right-10 top-1/2 transform -translate-y-1/2 text-primary-1 hover:text-primary-4 focus:outline-none"
         @click="clearSearch"
       >
         <i data-feather="x"></i>

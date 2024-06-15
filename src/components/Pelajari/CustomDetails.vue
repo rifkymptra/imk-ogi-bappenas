@@ -4,7 +4,7 @@
       <span class="year-label text-primary-1 ml-6 font-bold" :style="{ fontSize : '25px'}">{{ title }}</span>
       <span ref="icon" class="transform transition-transform duration-200"></span>
     </summary>
-    <div v-show="isOpen" class="details-content mt-4" :style= "{ fontSize : '15px'}  ">
+    <div v-show="isOpen" class="details-content mt-4 ml-6" :style= "{ fontSize : '15px'}  ">
       <slot></slot>
     </div>
   </details>

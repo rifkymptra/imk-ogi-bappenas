@@ -1,27 +1,29 @@
 <template>
   <div class="flex justify-center mt-12 space-x-2">
     <button 
-      class="px-4 py-2 bg-gray-200 rounded" 
+      class="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 text-black rounded disabled:bg-neutral-300" 
       @click="$emit('prev-page')" 
       :disabled="currentPage === 1"
     >
-      <i data-feather="chevron-left"></i>
+      <img src="../../assets/chevron-left.svg" alt="Previous" class="w-6 h-6"/>
     </button>
     <button 
       v-for="page in totalPages" 
       :key="page" 
-      class="px-4 py-2 bg-gray-200 rounded" 
-      :class="{'bg-red-500 text-white': currentPage === page}"
+      class="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 text-black rounded" 
+      :class="{
+        'border-primary-3 text-primary-3': currentPage === page
+      }"
       @click="$emit('change-page', page)"
     >
       {{ page }}
     </button>
     <button 
-      class="px-4 py-2 bg-gray-200 rounded" 
+      class="w-8 h-8 flex items-center justify-center bg-white border border-gray-300 text-black rounded disabled:bg-neutral-300" 
       @click="$emit('next-page')" 
       :disabled="currentPage >= totalPages"
     >
-      <i data-feather="chevron-right"></i>
+      <img src="../../assets/chevron-right.svg" alt="Next" class="w-6 h-6"/>
     </button>
   </div>
 </template>
@@ -29,12 +31,18 @@
 <script>
 export default {
   props: {
-    currentPage: Number,
-    totalPages: Number
+    currentPage: {
+      type: Number,
+      required: true
+    },
+    totalPages: {
+      type: Number,
+      required: true
+    }
   }
 }
 </script>
 
 <style scoped>
-/* Add custom styles if needed */
+/* Additional styles if needed */
 </style>

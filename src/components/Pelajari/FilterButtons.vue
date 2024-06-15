@@ -1,8 +1,12 @@
 <template>
   <div class="flex space-x-2 mb-10">
     <button 
-      class="bg-gray-200 px-4 py-2 rounded-xl" 
-      :class="{'bg-red-500 text-white': selectedFilter === filter}"
+      class="px-4 py-2 rounded-xl font-jakarta font-bold text-neutral-2" 
+      :style="{ fontSize: '13px' }"
+      :class="{
+        'bg-primary-1 text-white font-extrabold': selectedFilter === filter,
+        'bg-neutral-4': selectedFilter !== filter
+      }"
       v-for="filter in filters" 
       :key="filter"
       @click="$emit('select-filter', filter)"
@@ -15,8 +19,18 @@
 <script>
 export default {
   props: {
-    filters: Array,
-    selectedFilter: String
+    filters: {
+      type: Array,
+      required: true
+    },
+    selectedFilter: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>
+
+<style scoped>
+/* Add custom styles if needed */
+</style>

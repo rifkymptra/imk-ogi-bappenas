@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="p-4 flex flex-col items-center">
     <!-- Filter Section -->
     <FilterButtons
       class="flex flex-row justify-center items-center space-x-8" 
@@ -9,9 +9,9 @@
     />
     
     <!-- Information Cards Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
       <InfoCard 
-        v-for="card in filteredCards" 
+        v-for="card in paginatedCards" 
         :key="card.title" 
         :card="card"
       />
@@ -52,19 +52,20 @@ export default {
       selectedFilter: 'Semua',
       cards: cards, // Using the imported data
       currentPage: 1,
-      itemsPerPage: 6 // Set to 9 for 3x3 grid
+      itemsPerPage: 6 // Set to 6 for 2x3 grid
     }
   },
   computed: {
     filteredCards() {
-      const filtered = this.selectedFilter === 'Semua' ? this.cards : this.cards.filter(card => card.category === this.selectedFilter);
-      const start = (this.currentPage - 1) * this.itemsPerPage;
-      const end = start + this.itemsPerPage;
-      return filtered.slice(start, end);
+      return this.selectedFilter === 'Semua' ? this.cards : this.cards.filter(card => card.category === this.selectedFilter);
     },
     totalPages() {
-      const filtered = this.selectedFilter === 'Semua' ? this.cards : this.cards.filter(card => card.category === this.selectedFilter);
-      return Math.ceil(filtered.length / this.itemsPerPage);
+      return Math.ceil(this.filteredCards.length / this.itemsPerPage);
+    },
+    paginatedCards() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+      return this.filteredCards.slice(start, end);
     }
   },
   methods: {

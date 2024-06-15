@@ -16,7 +16,7 @@
 
     <!-- Search Bar -->
     <div class="container mx-auto flex justify-center mt-5 px-4">
-      <SearchBar placeholder="Cari Berita OGI" customClasses="" maxWidth="1166px" />
+      <SearchBar placeholder="Cari Berita OGI" customClasses="" maxWidth="1166px" @search-query="onSearchQuery" @clear-search="clearSearchQuery"/>
     </div>
     <div class="h-[calc(5vh)]"></div>
 
@@ -96,7 +96,10 @@
 
         <!-- Reports Section -->
         <div class="w-3/4 pl-4">
-          <div class="space-y-4">
+          <div v-if="filteredReports.length === 0" class="p-4 bg-white shadow-card rounded-lg">
+            <p class="font-inter font-bold text-[18px] text-center">Tidak ada berita terkait.</p>
+          </div>
+          <div v-else class="space-y-4">
             <!-- Report Card -->
             <div v-for="(report, index) in paginatedReports" :key="index" class="p-4 bg-white shadow-card rounded-lg">
               <h3 class="font-inter font-semibold text-[12px] text-primary-1 mb-2">{{ report.kategori }}</h3>
@@ -116,7 +119,7 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-center space-x-2 mt-4">
+          <div v-if="filteredReports.length > 0" class="flex justify-center space-x-2 mt-4">
             <button
               @click="changePage(currentPage - 1)"
               :disabled="currentPage === 1"
@@ -187,6 +190,8 @@ export default {
       sortCriteria: 'relevance', // Default sorting criteria
       selectedCategory: 'Semua', // Default selected category
       reports: Berita, // Load the reports data from JSON
+      filteredReports: Berita, // To store filtered reports
+      searchQuery: '', // To store the search query
       currentPage: 1,
       itemsPerPage: 5,
       yearRange: [2000, 2024] // Placeholder, will be set in created hook
@@ -196,10 +201,10 @@ export default {
     paginatedReports() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
       const end = start + this.itemsPerPage;
-      return this.reports.slice(start, end);
+      return this.filteredReports.slice(start, end);
     },
     totalPages() {
-      return Math.ceil(this.reports.length / this.itemsPerPage);
+      return Math.ceil(this.filteredReports.length / this.itemsPerPage);
     },
     categories() {
       const categories = new Set(this.reports.map(report => report.kategori));
@@ -219,6 +224,9 @@ export default {
         console.log('Year range changed:', newRange);
       },
       deep: true
+    },
+    searchQuery(newQuery) {
+      this.applyFilter(); // Apply filter whenever search query changes
     }
   },
   methods: {
@@ -229,11 +237,33 @@ export default {
       this.selectedCategory = 'Semua';
     },
     applyFilter() {
-      console.log(`Applying filter: Sorting by ${this.sortCriteria}, Year range: ${this.yearRange}, Category: ${this.selectedCategory}`);
-      // Add your filtering logic here based on sortCriteria, yearRange, and selectedCategory
+      console.log(`Applying filter: Sorting by ${this.sortCriteria}, Year range: ${this.yearRange}, Category: ${this.selectedCategory}, Search Query: ${this.searchQuery}`);
+      
+      let filtered = this.reports.filter(report => {
+        const isInYearRange = report.tahun >= this.yearRange[0] && report.tahun <= this.yearRange[1];
+        const isInCategory = this.selectedCategory === 'Semua' || report.kategori === this.selectedCategory;
+        const matchesSearchQuery = report.judul.toLowerCase().includes(this.searchQuery.toLowerCase()) || report.kategori.toLowerCase().includes(this.searchQuery.toLowerCase());
+        return isInYearRange && isInCategory && matchesSearchQuery;
+      });
+
+      if (this.sortCriteria === 'latest') {
+        filtered.sort((a, b) => new Date(b.tanggal) - new Date(a.tanggal));
+      } else if (this.sortCriteria === 'mostRead') {
+        filtered.sort((a, b) => b.views - a.views);
+      }
+
+      this.filteredReports = filtered;
+      this.currentPage = 1; // Reset to the first page after applying filter
     },
     changePage(page) {
       this.currentPage = page;
+    },
+    onSearchQuery(query) {
+      this.searchQuery = query;
+    },
+    clearSearchQuery() {
+      this.searchQuery = '';
+      this.applyFilter(); // Apply filter to refresh the list
     }
   },
   created() {

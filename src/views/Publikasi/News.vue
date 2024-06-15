@@ -16,7 +16,7 @@
 
     <!-- Search Bar -->
     <div class="container mx-auto flex justify-center mt-5 px-4">
-      <SearchBar placeholder="Telusuri" customClasses="" maxWidth="1166px" />
+      <SearchBar placeholder="Cari Berita OGI" customClasses="" maxWidth="1166px" />
     </div>
     <div class="h-[calc(5vh)]"></div>
 
@@ -61,10 +61,8 @@
             </div>
             <h3 class="font-inter font-semibold text-[12px] mb-2">Kategori Berita</h3>
             <div class="relative w-full">
-              <select v-model="selectedCategory" class="w-full px-4 py-2 border rounded-lg pr-10 appearance-none">
-                <option>Semua</option>
-                <option>RAN</option>
-                <!-- Add other options as needed -->
+              <select v-model="selectedCategory" class="w-full px-4 py-2 border rounded-lg pr-10 appearance-none text-[14px]">
+                <option v-for="category in categories" :key="category">{{ category }}</option>
               </select>
               <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center px-2 text-gray-700">
                 <i data-feather="chevron-down"></i>
@@ -80,17 +78,17 @@
             <h3 class="font-inter font-semibold text-[12px] mb-3 mt-4">Tahun</h3>
             <Slider
               v-model="yearRange"
-              :min="2013"
-              :max="2024"
+              :min="minYear"
+              :max="maxYear"
               :tooltips="true"
               showTooltip="drag"
               class="custom-slider"
             />
             <div class="flex justify-between text-sm mt-4">
-              <input type="number" v-model.number="yearRange[0]" class="year-input" min="2013" max="2024"/>
-              <input type="number" v-model.number="yearRange[1]" class="year-input" min="2013" max="2024"/>
+              <input type="number" v-model.number="yearRange[0]" class="year-input" :min="minYear" :max="maxYear"/>
+              <input type="number" v-model.number="yearRange[1]" class="year-input" :min="minYear" :max="maxYear"/>
             </div>
-            <button @click="applyFilter" class="w-full mt-4 px-4 py-2 bg-primary-1 text-white rounded-lg hover:bg-primary-3 focus:outline-none">
+            <button @click="applyFilter" class="w-full mt-4 px-4 py-2 font-jakarta font-bold bg-primary-1 text-white rounded-lg hover:bg-primary-3 focus:outline-none">
               Terapkan
             </button>
           </div>
@@ -100,36 +98,69 @@
         <div class="w-3/4 pl-4">
           <div class="space-y-4">
             <!-- Report Card -->
-            <div class="p-4 bg-white shadow rounded-lg">
-              <h3 class="font-inter font-semibold text-[12px] text-primary-1 mb-2">Laporan RAN</h3>
-              <p class="font-inter font-bold text=[18px]">Kunjungan Sekretariat OGI ke Kabupaten Banggai dalam Rangka Pemantauan Implementasi Rencana Aksi Daerah OGP Local Banggai</p>
+            <div v-for="(report, index) in paginatedReports" :key="index" class="p-4 bg-white shadow-card rounded-lg">
+              <h3 class="font-inter font-semibold text-[12px] text-primary-1 mb-2">{{ report.kategori }}</h3>
+              <p class="font-inter font-bold text-[18px]">{{ report.judul }}</p>
               <div class="flex justify-between items-center mt-2">
-                <button class="w-[79px] h-[32px] font-jakarta font-bold text-[13px] bg-primary-1 text-white rounded-lg hover:bg-primary-3 focus:outline-none">Baca</button>
+                <a :href="report.link" target="_blank">
+                  <button class="w-[79px] h-[32px] font-jakarta font-bold text-[13px] bg-primary-1 text-white rounded-lg hover:bg-primary-3 focus:outline-none">Baca</button>
+                </a>
                 <div class="text-gray-500 text-sm flex space-x-4">
-                  <span><i data-feather="calendar"></i> 30 Desember 2022</span>
-                  <span><i data-feather="eye"></i> 2,000</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Duplicate the above block for additional reports -->
-            <div class="p-4 bg-white shadow rounded-lg">
-              <h3 class="font-inter font-semibold text-[12px] text-primary-1 mb-2">Laporan RAN</h3>
-              <p class="font-inter font-bold text=[18px]">Kunjungan Sekretariat OGI ke Kabupaten Banggai dalam Rangka Pemantauan Implementasi Rencana Aksi Daerah OGP Local Banggai</p>
-              <div class="flex justify-between items-center mt-2">
-                <button class="w-[79px] h-[32px] font-jakarta font-bold text-[13px] bg-primary-1 text-white rounded-lg hover:bg-primary-3 focus:outline-none">Baca</button>
-                <div class="text-gray-500 text-sm flex space-x-4">
-                  <span><i data-feather="calendar"></i> 30 Desember 2022</span>
-                  <span><i data-feather="eye"></i> 2,000</span>
+                  <span class="flex items-center font-jakarta font-semibold text-[10px] text-neutral-3">
+                    <i data-feather="calendar" class="icon-calendar mr-1"></i> {{ report.tanggal }}
+                  </span>
+                  <span class="flex items-center font-jakarta font-semibold text-[10px] text-neutral-3">
+                    <i data-feather="eye" class="icon-eye mr-1"></i> {{ report.views.toLocaleString() }}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
+          <div class="flex justify-center space-x-2 mt-4">
+            <button
+              @click="changePage(currentPage - 1)"
+              :disabled="currentPage === 1"
+              :class="{
+                'bg-neutral-4 text-white cursor-not-allowed': currentPage === 1,
+                'bg-white text-neutral-2': currentPage !== 1
+              }"
+              class="w-[32px] h-[32px] flex items-center justify-center border border-neutral-3 rounded-md hover:bg-neutral-4 focus:outline-none"
+            >
+              <i data-feather="chevron-left"></i>
+            </button>
+
+            <button
+              v-for="page in totalPages"
+              :key="page"
+              @click="changePage(page)"
+              :class="{
+                'bg-white border-primary-1 text-primary-1': currentPage === page,
+                'bg-white border-neutral-3 text-neutral-3': currentPage !== page
+              }"
+              class="w-[32px] h-[32px] font-inter font-medium text-[13px] flex items-center justify-center border rounded-md hover:bg-neutral-4 focus:outline-none"
+            >
+              {{ page }}
+            </button>
+
+            <button
+              @click="changePage(currentPage + 1)"
+              :disabled="currentPage === totalPages"
+              :class="{
+                'bg-neutral-4 text-white cursor-not-allowed': currentPage === totalPages,
+                'bg-white text-neutral-2': currentPage !== totalPages
+              }"
+              class="w-[32px] h-[32px] flex items-center justify-center border border-neutral-3 rounded-md hover:bg-neutral-4 focus:outline-none"
+            >
+              <i data-feather="chevron-right"></i>
+            </button>
+          </div>
         </div>
+
       </div>
     </div>
 
     <!-- Footer -->
+    <div class="h-[calc(5vh)]"></div>
     <Footer />
   </div>
 </template>
@@ -140,6 +171,7 @@ import Footer from "../../components/Footer.vue";
 import TitleSection from "../../components/TitleSection.vue";
 import SearchBar from "../../components/SearchBar.vue";
 import Slider from "@vueform/slider";
+import Berita from '../../assets/data/berita.json';
 
 export default {
   name: "Publikasi",
@@ -152,10 +184,42 @@ export default {
   },
   data() {
     return {
-      yearRange: [2013, 2024],
       sortCriteria: 'relevance', // Default sorting criteria
-      selectedCategory: 'Semua' // Default selected category
+      selectedCategory: 'Semua', // Default selected category
+      reports: Berita, // Load the reports data from JSON
+      currentPage: 1,
+      itemsPerPage: 5,
+      yearRange: [2000, 2024] // Placeholder, will be set in created hook
     };
+  },
+  computed: {
+    paginatedReports() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+      return this.reports.slice(start, end);
+    },
+    totalPages() {
+      return Math.ceil(this.reports.length / this.itemsPerPage);
+    },
+    categories() {
+      const categories = new Set(this.reports.map(report => report.kategori));
+      return ['Semua', ...categories];
+    },
+    minYear() {
+      return Math.min(...this.reports.map(report => report.tahun));
+    },
+    maxYear() {
+      return Math.max(...this.reports.map(report => report.tahun));
+    }
+  },
+  watch: {
+    yearRange: {
+      handler(newRange) {
+        // Handle the changes in yearRange and update other components if needed
+        console.log('Year range changed:', newRange);
+      },
+      deep: true
+    }
   },
   methods: {
     setSortCriteria(criteria) {
@@ -167,7 +231,14 @@ export default {
     applyFilter() {
       console.log(`Applying filter: Sorting by ${this.sortCriteria}, Year range: ${this.yearRange}, Category: ${this.selectedCategory}`);
       // Add your filtering logic here based on sortCriteria, yearRange, and selectedCategory
+    },
+    changePage(page) {
+      this.currentPage = page;
     }
+  },
+  created() {
+    // Set the initial year range based on the reports data
+    this.yearRange = [this.minYear, this.maxYear];
   },
   mounted() {
     this.$feather.replace(); // Replace <i> tags with Feather Icons on mount
@@ -232,5 +303,18 @@ input[type="number"] {
 input[type="number"]:focus {
   outline: none;
   border-bottom: 2px solid #AD2330; /* Adjust color as needed */
+}
+
+/* Custom icon styles */
+.icon-calendar,
+.icon-eye {
+  width: 16px; /* Adjust the size as needed */
+  height: 16px; /* Adjust the size as needed */
+  color: #63666A; /* Adjust color to neutral-3 */
+}
+
+/* Add shadow to report cards */
+.shadow-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 </style>

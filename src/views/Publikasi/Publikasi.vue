@@ -33,7 +33,7 @@
                 image="/src/assets/IRM.jpg"
                 title="IRM"
                 description="Independent Reporting Mechanism"
-                linkText="Lihat lowongan"
+                linkText="Unduh IRM"
                 link="#"
             />
             </div>

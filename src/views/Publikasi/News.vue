@@ -165,6 +165,7 @@
     <!-- Footer -->
     <div class="h-[calc(5vh)]"></div>
     <Footer />
+    <ScrollButton />
   </div>
 </template>
 
@@ -175,6 +176,7 @@ import TitleSection from "../../components/TitleSection.vue";
 import SearchBar from "../../components/SearchBar.vue";
 import Slider from "@vueform/slider";
 import Berita from '../../assets/data/berita.json';
+import ScrollButton from "../../components/ScrollButton.vue";
 
 export default {
   name: "Publikasi",
@@ -183,7 +185,8 @@ export default {
     Footer,
     TitleSection,
     SearchBar,
-    Slider
+    Slider,
+    ScrollButton,
   },
   data() {
     return {

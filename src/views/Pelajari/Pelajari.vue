@@ -27,7 +27,7 @@
           title="Kegiatan Kami" 
           description="Kepoin kegiatan-kegiatan yang sudah kami lakukan di OGI."
           linkText="Lihat kegiatan"
-          link="#"
+          link="/pelajari/kegiatan"
           />
           <Card 
           image="/src/assets/foto-4.png" 

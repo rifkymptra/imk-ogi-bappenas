@@ -1,0 +1,21 @@
+// src/data.js
+export default [
+  { category: 'Open Government Talk', title: 'Role of CSOs in Co-creation Process', date: '15 Agustus 2023', image: '/src/assets/kegiatan-1.png' },
+  { category: 'Open Government Talk', title: 'Penyusunan Rencana Aksi yang Berdampak', date: '12 Juli 2023', image: '/src/assets/kegiatan-2.png' },
+  { category: 'Open Government Talk', title: 'Peran Satu Data Indonesia dalam Mewujudkan Pemerintahan yang Terbuka', date: '12 Agustus 2020', image: '/src/assets/kegiatan-3.png' },
+  { category: 'OGI Goes to Campus', title: 'Kunjungan BEM–KM UGM', date: '', image: '/src/assets/kegiatan-4.png' },
+  { category: 'OGI Goes to Campus', title: 'Isu Strategis Keterbukaan Pemerintah', date: '', image: '/src/assets/kegiatan-5.png' },
+  { category: 'Open Government Week', title: 'Enabling Open Government For All', date: '27 Mei 2024', image: '/src/assets/kegiatan-6.png' }, 
+  { category: 'Open Government Week', title: 'Enabling Open Government For All', date: '27 Mei 2024', image: '/src/assets/kegiatan-6.png' },
+  { category: 'OGI Goes to Campus', title: 'Isu Strategis Keterbukaan Pemerintah', date: '', image: '/src/assets/kegiatan-5.png' },
+  { category: 'OGI Goes to Campus', title: 'Kunjungan BEM–KM UGM', date: '', image: '/src/assets/kegiatan-4.png' },
+  { category: 'Open Government Talk', title: 'Peran Satu Data Indonesia dalam Mewujudkan Pemerintahan yang Terbuka', date: '12 Agustus 2020', image: '/src/assets/kegiatan-3.png' },
+  { category: 'Open Government Talk', title: 'Penyusunan Rencana Aksi yang Berdampak', date: '12 Juli 2023', image: '/src/assets/kegiatan-2.png' },
+  { category: 'Open Government Talk', title: 'Role of CSOs in Co-creation Process', date: '15 Agustus 2023', image: '/src/assets/kegiatan-1.png' },
+  { category: 'Open Government Talk', title: 'Role of CSOs in Co-creation Process', date: '15 Agustus 2023', image: '/src/assets/kegiatan-1.png' },
+  { category: 'Open Government Talk', title: 'Penyusunan Rencana Aksi yang Berdampak', date: '12 Juli 2023', image: '/src/assets/kegiatan-2.png' },
+  { category: 'Open Government Talk', title: 'Peran Satu Data Indonesia dalam Mewujudkan Pemerintahan yang Terbuka', date: '12 Agustus 2020', image: '/src/assets/kegiatan-3.png' },
+  { category: 'OGI Goes to Campus', title: 'Kunjungan BEM–KM UGM', date: '', image: '/src/assets/kegiatan-4.png' },
+  { category: 'OGI Goes to Campus', title: 'Isu Strategis Keterbukaan Pemerintah', date: '', image: '/src/assets/kegiatan-5.png' },
+  { category: 'Open Government Week', title: 'Enabling Open Government For All', date: '27 Mei 2024', image: '/src/assets/kegiatan-6.png' },
+];

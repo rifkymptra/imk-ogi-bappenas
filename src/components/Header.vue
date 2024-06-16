@@ -14,14 +14,18 @@
         :class="{ hidden: !mobileMenuOpen, flex: mobileMenuOpen }"
         class="hidden md:flex space-x-4 items-center w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row"
       >
-        <a href="/" class="text-gray-800 font-semibold">Beranda</a>
+        <a href="/" class="text-gray-800 font-semibold hover:text-primary-1"
+          >Beranda</a
+        >
         <div class="relative group">
           <a
             href="/ran"
             class="text-gray-800 font-semibold flex items-center group"
           >
-            <span class="block md:hidden">RAN</span>
-            <span class="hidden md:block">Rencana Aksi Nasional</span>
+            <span class="block md:hidden hover:text-primary-1">RAN</span>
+            <span class="hidden md:block hover:text-primary-1"
+              >Rencana Aksi Nasional</span
+            >
             <img
               src="../assets/chevron-down.svg"
               alt="Dropdown"
@@ -49,7 +53,7 @@
         <div class="relative group">
           <a
             href="#"
-            class="text-gray-800 font-semibold flex items-center group"
+            class="text-gray-800 font-semibold flex items-center group hover:text-primary-1"
           >
             Publikasi
             <img
@@ -72,7 +76,7 @@
         <div class="relative group">
           <a
             href="#"
-            class="text-gray-800 font-semibold flex items-center group"
+            class="text-gray-800 font-semibold flex items-center group hover:text-primary-1"
           >
             Pelajari
             <img
@@ -93,7 +97,11 @@
             <a href="#" class="block px-4 py-2 hover:bg-gray-100"
               >Kegiatan Kami</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Karir</a>
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-gray-100 hover:text-primary-1"
+              >Karir</a
+            >
           </div>
         </div>
       </nav>

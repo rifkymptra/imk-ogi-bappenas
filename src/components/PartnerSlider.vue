@@ -117,8 +117,8 @@ export default {
         { logo: "cso17.png", name: "Partner 18" },
         { logo: "cso18.jpg", name: "Partner 19" },
         { logo: "cso19.png", name: "Partner 20" },
-        { logo: "cso20.png", name: "Partner 21" },
-        { logo: "cso21.png", name: "Partner 22" },
+        // { logo: "cso20.png", name: "Partner 21" },
+        // { logo: "cso21.png", name: "Partner 22" },
       ],
       interval: null,
     };

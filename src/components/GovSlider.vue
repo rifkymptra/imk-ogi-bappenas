@@ -102,8 +102,8 @@ export default {
         { logo: "newkl6.png", name: "KL 6" },
         { logo: "newkl7.png", name: "KL 7" },
         { logo: "newkl8.png", name: "KL 8" },
-        //        { logo: "newkl9.png", name: "KL 9" },
-        //        { logo: "newkl10.png", name: "KL 10" },
+        { logo: "newkl9.png", name: "KL 9" },
+        { logo: "newkl10.png", name: "KL 10" },
       ],
       autoSlideInterval: null,
     };

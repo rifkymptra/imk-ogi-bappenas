@@ -7,15 +7,17 @@ import Home from './views/Home.vue';
 import App from './App.vue';
 import Pelajari from './views/Pelajari/Pelajari.vue';
 import Karir from './views/Pelajari/Karir.vue';
-import Publikasi from './views/Publikasi/Publikasi.vue';
 import Perjalanan from './views/Pelajari/Perjalanan.vue';
 import RAN from './views/RAN/RAN.vue';
 import Komitmen from './views/RAN/Komitmen.vue';
-import News from './views/Publikasi/News.vue';
 import Komitmen2 from './views/RAN/Komitmen2.vue';
 import Monitoring from './views/RAN/Monitoring.vue';
 import Dokumen from './views/RAN/Dokumen.vue';
 import Sekretariat from './views/Pelajari/Sekretariat.vue';
+// Publikasi
+import News from './views/Publikasi/News.vue';
+import Publikasi from './views/Publikasi/Publikasi.vue';
+import Laporan from './views/Publikasi/Laporan.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -30,6 +32,7 @@ const routes = [
   { path: '/ran/monitoring-dan-evaluasi', component: Monitoring},
   { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen},
   { path: '/pelajari/sekretariat', component: Sekretariat},
+  { path: '/publikasi/laporan-dan-kajian', component: Laporan},
 ];
 
 const router = createRouter({

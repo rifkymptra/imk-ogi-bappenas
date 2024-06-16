@@ -179,7 +179,7 @@ import Berita from '../../assets/data/berita.json';
 import ScrollButton from "../../components/ScrollButton.vue";
 
 export default {
-  name: "Publikasi",
+  name: "News",
   components: {
     Header,
     Footer,

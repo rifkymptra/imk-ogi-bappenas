@@ -35,7 +35,7 @@
       <InfoCard
         iconClass="/RAN/lock.svg"
         title="Pelaporan Money OMS"
-        link="/ran/komitmen/OMS"
+        link="/ran/monitoring-dan-evaluasi/OMS"
       />
     </div>
   </div>

@@ -20,7 +20,8 @@ import Kegiatan from './views/Pelajari/Kegiatan.vue';
 import News from './views/Publikasi/News.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
 import Laporan from './views/Publikasi/Laporan.vue';
-import IRM from './views/Publikasi/IRM.vue'
+import IRM from './views/Publikasi/IRM.vue';
+import OMS from './views/RAN/OMS.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -36,6 +37,7 @@ const routes = [
   { path: '/ran/komitmen/2', component: Komitmen2},
   { path: '/ran/monitoring-dan-evaluasi', component: Monitoring},
   { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen},
+  { path: '/ran/monitoring-dan-evaluasi/oms', component: OMS},
   { path: '/publikasi', component: Publikasi},
   { path: '/publikasi/ogi-news', component: News},
   { path: '/publikasi/laporan-dan-kajian', component: Laporan},

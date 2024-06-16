@@ -27,14 +27,14 @@
                 title="Laporan dan Kajian"
                 description="Laporan pelaksanaan dari kegiatan yang telah dilakukan."
                 linkText="Unduh Berkas"
-                link="#"
+                link="/publikasi/laporan-dan-kajian"
             />
             <Card
                 image="/src/assets/IRM.jpg"
                 title="IRM"
                 description="Independent Reporting Mechanism"
-                linkText="Lihat lowongan"
-                link="#"
+                linkText="Unduh IRM"
+                link="/publikasi/irm"
             />
             </div>
             <div class="h-[calc(12vh)]"></div>

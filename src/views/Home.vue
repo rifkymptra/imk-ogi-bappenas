@@ -1,7 +1,6 @@
 <template>
+  <Header />
   <div id="app">
-    <Header />
-
     <!-- Hero -->
     <div
       id="hero"
@@ -12,11 +11,11 @@
         Mewujudkan Pemerintahan Terbuka dan Inovatif Bersama Rakyat
       </h3>
       <h1
-        class="text-primary-2 font-bold text-4xl md:text-5xl lg:text-7xl mb-6 md:mb-8"
+        class="text-primary-2 font-bold text-3xl md:text-5xl lg:text-7xl mb-6 md:mb-8"
       >
         Open Government Indonesia
       </h1>
-      <h3 class="font-bold text-lg md:text-xl mx-2 md:mx-4 lg:mx-0">
+      <h3 class="font-bold text-sm md:text-xl mx-2 md:mx-4 lg:mx-0">
         Bersama Open Government Indonesia (OGI), kami berkomitmen menciptakan
         solusi inovatif melalui kolaborasi antara pemerintah, masyarakat sipil,
         akademisi, dan mitra pembangunan untuk masa depan yang lebih transparan
@@ -35,7 +34,7 @@
       </a>
     </div>
 
-    <div class="z-0">
+    <div class="hidden lg:block">
       <div
         class="flex justify-start items-start absolute top-[-5.5rem] -left-40 w-2/3"
       >

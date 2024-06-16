@@ -1,24 +1,26 @@
 <template>
   <!-- RAN Card -->
   <div
-    class="bg-primary-5/10 max-h-[50rem] pt-12 mt-36 mx-16 rounded-3xl overflow-hidden relative"
+    class="bg-primary-5/10 max-h-[50rem] pt-12 mt-12 md:mt-36 mx-4 md:mx-16 rounded-3xl overflow-hidden relative"
   >
     <div class="container mx-auto text-center relative">
-      <h2 class="text-[3.5rem] font-bold mb-4 text-primary-1">
+      <h2
+        class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-primary-1"
+      >
         <span class="text-neutral-1">Apa itu</span> Rencana Aksi Nasional (RAN)?
       </h2>
-      <p class="text-lg mb-6 max-w-3xl mx-auto text-neutral-1">
+      <p class="text-base md:text-lg mb-6 max-w-3xl mx-auto text-neutral-1">
         Langkah nyata menuju transparansi dan partisipasi publik. Bersama-sama,
         kita wujudkan pemerintahan yang inovatif, akuntabel, dan inklusif!
       </p>
-      <a href="#" class="cursor-pointer">
+      <a href="#" class="cursor-pointer inline-block">
         <button
           class="bg-primary-1 hover:bg-primary-2 text-white font-semibold py-2 px-6 mb-8 rounded-full shadow-sm transition duration-300 shadow-primary-1 group mt-4 cursor-pointer"
         >
           Lihat Rencana Aksi Nasional
         </button>
       </a>
-      <div class="flex justify-center -space-x-6 mt-20">
+      <div class="justify-center -space-x-6 mt-20 hidden md:flex lg:flex">
         <div
           class="transform transition-transform hover:scale-105 drop-shadow-lg z-0 pt-16"
         >
@@ -48,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="">
+    <div class="hidden lg:block md:block">
       <img
         src="../assets/grafik-home-3.png"
         alt=""

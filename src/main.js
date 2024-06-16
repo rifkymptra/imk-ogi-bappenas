@@ -14,6 +14,7 @@ import Komitmen2 from './views/RAN/Komitmen2.vue';
 import Monitoring from './views/RAN/Monitoring.vue';
 import Dokumen from './views/RAN/Dokumen.vue';
 import Sekretariat from './views/Pelajari/Sekretariat.vue';
+import Komitmen1 from './views/RAN/Komitmen/Komitmen1.vue';
 import Kegiatan from './views/Pelajari/Kegiatan.vue';
 // Publikasi
 import News from './views/Publikasi/News.vue';
@@ -34,6 +35,7 @@ const routes = [
   { path: '/ran/monitoring-dan-evaluasi', component: Monitoring},
   { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen},
   { path: '/pelajari/sekretariat', component: Sekretariat},
+  { path: '/ran/komitmen/1', component: Komitmen1},
   { path: '/pelajari/kegiatan', component: Kegiatan},
   { path: '/publikasi/laporan-dan-kajian', component: Laporan},
   { path: '/publikasi/irm', component: IRM},

@@ -1,60 +1,105 @@
 <template>
   <header class="bg-white border-b font-jakarta fixed w-full top-0 z-50">
-    <div class="container mx-auto px-4 flex items-center justify-between">
+    <div
+      class="container mx-auto px-4 flex items-center justify-between flex-wrap md:flex-nowrap"
+    >
       <div class="flex items-center space-x-4">
-        <img src="../assets/Logo_Original.svg" alt="Logo" class="h-20" />
+        <img
+          src="../assets/Logo_Original.svg"
+          alt="Logo"
+          class="h-12 md:h-20"
+        />
       </div>
-      <nav class="flex space-x-4 items-center">
+      <nav
+        :class="{ hidden: !mobileMenuOpen, flex: mobileMenuOpen }"
+        class="hidden md:flex space-x-4 items-center w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row"
+      >
         <a href="/" class="text-gray-800 font-semibold">Beranda</a>
         <div class="relative group">
-          <a href="#" class="text-gray-800 font-semibold flex items-center group">
-            Rencana Aksi Nasional
-            <i
-              data-feather="chevron-down"
+          <a
+            href="/ran"
+            class="text-gray-800 font-semibold flex items-center group"
+          >
+            <span class="block md:hidden">RAN</span>
+            <span class="hidden md:block">Rencana Aksi Nasional</span>
+            <img
+              src="../assets/chevron-down.svg"
+              alt="Dropdown"
               class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180"
-            ></i>
+            />
           </a>
           <div
-            class="absolute hidden group-hover:block bg-white shadow-lg py-2"
+            class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+            <a
+              href="/ran/dokumen-dan-publikasi-data"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >Dokumen dan Publikasi Data</a
+            >
+            <a
+              href="/ran/monitoring-dan-evaluasi"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >Monitoring dan Evaluasi</a
+            >
+            <a href="/ran/komitmen" class="block px-4 py-2 hover:bg-gray-100"
+              >Komitmen RAN OGI VII</a
+            >
           </div>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-800 font-semibold flex items-center group">
+          <a
+            href="#"
+            class="text-gray-800 font-semibold flex items-center group"
+          >
             Publikasi
-            <i
-              data-feather="chevron-down"
+            <img
+              src="../assets/chevron-down.svg"
+              alt="Dropdown"
               class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180"
-            ></i>
+            />
           </a>
           <div
-            class="absolute hidden group-hover:block bg-white shadow-lg py-2"
+            class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">OGI News</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Infografik</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+              >Laporan dan Kajian</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">IRM</a>
           </div>
         </div>
         <div class="relative group">
-          <a href="#" class="text-gray-800 font-semibold flex items-center group">
+          <a
+            href="#"
+            class="text-gray-800 font-semibold flex items-center group"
+          >
             Pelajari
-            <i
-              data-feather="chevron-down"
+            <img
+              src="../assets/chevron-down.svg"
+              alt="Dropdown"
               class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300 group-hover:rotate-180"
-            ></i>
+            />
           </a>
           <div
-            class="absolute hidden group-hover:block bg-white shadow-lg py-2"
+            class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 1</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Submenu 2</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+              >Tentang Kami</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+              >Sekretariat Kami</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+              >Kegiatan Kami</a
+            >
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Karir</a>
           </div>
         </div>
       </nav>
-      <div class="flex items-center space-x-4">
-        <button class="text-gray-800">
-          <i data-feather="search" class="text-red-500 h-6 w-6"></i>
+      <div class="flex items-center space-x-4 mt-4 md:mt-0 relative z-50">
+        <button class="text-gray-800" @click="toggleSearch">
+          <img src="../assets/search.svg" alt="Search" class="h-6 w-6" />
         </button>
         <button class="flag text-gray-800 relative" @click="toggleMenu">
           <span class="flex items-center">
@@ -63,50 +108,152 @@
               alt=""
               class="h-4 w-6 border border-black inline"
             />
-            <i
-              data-feather="chevron-down"
+            <img
+              src="../assets/chevron-down.svg"
+              alt="Dropdown"
+              :class="{ 'rotate-180': showMenu }"
               class="ml-1 w-4 h-4 transition-transform ease-in-out duration-300"
-            ></i>
+            />
           </span>
         </button>
-        <div class="absolute bg-white shadow-lg py-2 mt-40" v-if="showMenu">
-          <a href="#" class="flex items-center gap-2 hover:bg-gray-100">
+        <div
+          class="absolute bg-white shadow-lg py-2 mt-12 md:mt-40 pr-4"
+          v-if="showMenu"
+          ref="menu"
+        >
+          <a
+            href="#"
+            class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2"
+          >
             <img
               src="../assets/indonesia.png"
               alt="Bahasa Indonesia"
-              class="h-4 w-6 ml-1 border border-black"
+              class="h-4 w-6 border border-black"
             />
-            <p class="block px-2 py-2 text-sm font-bold">ID</p>
+            <p class="block text-sm font-bold">ID</p>
           </a>
-          <a href="#" class="flex items-center gap-2 hover:bg-gray-100">
+          <a
+            href="#"
+            class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2"
+          >
             <img
               src="../assets/english.png"
               alt="English"
-              class="h-4 w-6 ml-1 border border-black"
+              class="h-4 w-6 border border-black"
             />
-            <p class="block px-2 py-2 text-sm font-bold">EN</p>
+            <p class="block text-sm font-bold">EN</p>
           </a>
         </div>
+        <button
+          @click="toggleMobileMenu"
+          class="block md:hidden text-gray-800 z-50 transition-transform ease-in-out duration-300"
+        >
+          <img
+            :src="
+              mobileMenuOpen ? '/src/assets/close.svg' : '/src/assets/menu.svg'
+            "
+            alt="Menu"
+            class="h-6 w-6"
+          />
+        </button>
       </div>
     </div>
   </header>
+
+  <div>
+    <div
+      class="w-full search-bar-overlay max-w-screen-2xl fixed top-0 right-0 z-50 bg-neutral-5/50 py-16 flex justify-center items-center h-[100vh]"
+      v-if="showSearchBar"
+    >
+      <input
+        type="text"
+        placeholder="Cari Dokumen RAN OGI..."
+        class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500 mx-24"
+        v-model="searchQuery"
+      />
+      <button
+        v-if="searchQuery"
+        class="absolute right-10 top-1/2 transform -translate-y-1/2 text-red-400 hover:text-red-600 focus:outline-none mx-24"
+        @click="clearSearch"
+      >
+        <i data-feather="x"></i>
+      </button>
+      <button
+        class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none mx-24"
+      >
+        <i data-feather="search"></i>
+      </button>
+    </div>
+  </div>
 </template>
 
 <script>
-import feather from "feather-icons";
+import SearchBar from "./SearchBar.vue";
+
 export default {
+  components: {
+    SearchBar,
+  },
   data() {
     return {
       showMenu: false,
+      mobileMenuOpen: false,
+      showSearchBar: false,
+      searchQuery: "",
     };
+  },
+  watch: {
+    searchQuery() {
+      this.updateFeatherIcons();
+    },
+  },
+  mounted() {
+    this.updateFeatherIcons();
   },
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu;
+      if (this.showMenu) {
+        document.addEventListener("click", this.closeMenu);
+      } else {
+        document.removeEventListener("click", this.closeMenu);
+      }
+    },
+    closeMenu(event) {
+      if (
+        !this.$refs.menu.contains(event.target) &&
+        !this.$refs.toggleButton.contains(event.target)
+      ) {
+        this.showMenu = false;
+        document.removeEventListener("click", this.closeMenu);
+      }
+    },
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
+    },
+    toggleSearch() {
+      this.showSearchBar = !this.showSearchBar;
+    },
+    clearSearch() {
+      this.searchQuery = "";
+    },
+    updateFeatherIcons() {
+      this.$nextTick(() => {
+        this.$feather.replace();
+      });
     },
   },
-  mounted() {
-    feather.replace();
+  beforeDestroy() {
+    document.removeEventListener("click", this.closeMenu);
   },
 };
 </script>
+
+<style>
+.search-bar-overlay {
+  position: fixed;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+</style>

@@ -6,11 +6,11 @@
       <div class="text-center">
         <TitleSection 
           link="/pelajari" 
-          linkText="PELAJARi" 
+          linkText="PELAJARI" 
           heading="Perjalanan " 
-          subheading="Singkat OGI" 
+          subheading1="Singkat OGI" 
           :headingPrimary="true"
-          :subheadingPrimary="false"
+          :subheading1Primary="false"
         />
         <p class="text-black font-inter" :style="{ fontSize: '20px' }">
           Kolaborasi antara Pemerintah Indonesia dan Organisasi Masyarakat Sipil (OMS) untuk melahirkan <br>
@@ -39,7 +39,7 @@
         <CustomDetails title="2020">
           <div class="details-text">
             <h2 class="text-lg font-semibold font-inter">1. Working Level Meeting di Jerman</h2>
-            <p class="ml-5">Pemerintah Indonesia sebagai anggota Steering Committee menghadiri OGP Steering Committee</p>
+            <p class="ml-5 font-inter font-normal">Pemerintah Indonesia sebagai anggota Steering Committee menghadiri OGP Steering Committee</p>
             <h2 class="text-lg font-semibold mt-4 font-inter">2. Peluncuran RAN OGI 2020-2022</h2>
             <h2 class="text-lg font-semibold mt-4 font-inter">3. Terpilihnya 5 daerah di Indonesia dalam OGP Local</h2>
             <div class="flex space-x-4 mt-2 ml-5 font-inter text-neutral-2">
@@ -49,11 +49,11 @@
               <LogoCard LogoSrc="/src/assets/sumbawa.png" alt="Sumbawa Barat" label="Sumbawa Barat" />
               <LogoCard LogoSrc="/src/assets/brebes.png" alt="Kab. Brebes" label="Kab. Brebes" />
             </div>
-            <p class="mt-4 ml-5 font-inter">
+            <p class="mt-4 ml-5 font-inter font-normal">
               <span class="text-primary-1 font-semibold">Open Government Partnership (OGP) Local</span> merupakan sebuah upaya untuk mendorong kolaborasi antara pemerintah daerah dengan masyarakat sipil dalam mewujudkan pemerintahan yang transparan, partisipatif, dan akuntabel.
             </p>
-            <h3 class="font-semibold mt-2 ml-5 font-inter"><span class="text-primary-1">Tujuan utamanya</span> meliputi :</h3>
-            <ul class="list-disc ml-9 mt-2 font-inter">
+            <h3 class="mt-2 ml-5 font-inter font-normal"><span class="text-primary-1 font-semibold">Tujuan utamanya</span> meliputi :</h3>
+            <ul class="list-disc ml-9 mt-2 font-inter font-normal">
               <li>Mengembangkan nilai keterbukaan pemerintah untuk mewujudkan tata kelola pemerintahan di tingkat daerah yang bersifat masyarakat-sentris dan meningkatkan pelayanan publik</li>
               <li>Memperkuat koordinasi dan kolaborasi pemerintah pusat dan daerah dalam mendorong implementasi nilai dan praktik keterbukaan pemerintah</li>
             </ul>

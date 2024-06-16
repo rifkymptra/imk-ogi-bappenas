@@ -52,7 +52,7 @@
         </div>
         <div class="relative group">
           <a
-            href="#"
+            href="/publikasi"
             class="text-gray-800 font-semibold flex items-center group hover:text-primary-1"
           >
             Publikasi
@@ -65,17 +65,29 @@
           <div
             class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">OGI News</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Infografik</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/publikasi/ogi-news"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >OGI News</a
+            >
+            <a
+              href="/publikasi/infografik"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >Infografik</a
+            >
+            <a
+              href="/publikasi/laporan-dan-kajian"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Laporan dan Kajian</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">IRM</a>
+            <a href="publikasi/irm" class="block px-4 py-2 hover:bg-gray-100"
+              >IRM</a
+            >
           </div>
         </div>
         <div class="relative group">
           <a
-            href="#"
+            href="/pelajari"
             class="text-gray-800 font-semibold flex items-center group hover:text-primary-1"
           >
             Pelajari
@@ -88,17 +100,23 @@
           <div
             class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/pelajari/perjalanan"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Tentang Kami</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/pelajari/sekretariat"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Sekretariat Kami</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/pelajari/kegiatan"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Kegiatan Kami</a
             >
             <a
-              href="#"
+              href="/pelajari/karir"
               class="block px-4 py-2 hover:bg-gray-100 hover:text-primary-1"
               >Karir</a
             >

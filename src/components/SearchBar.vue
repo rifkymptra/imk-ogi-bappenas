@@ -1,18 +1,15 @@
 <template>
-  <div
-    class="relative w-full"
-    :class="customClasses"
-    :style="{ maxWidth: maxWidth }"
-  >
+  <div class="relative w-full" :class="customClasses" :style="{ maxWidth: maxWidth }">
     <input
       type="text"
       :placeholder="placeholder"
       class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500"
       v-model="searchQuery"
+      @input="onInput"
     />
     <button
       v-if="searchQuery"
-      class="absolute right-10 top-1/2 transform -translate-y-1/2 text-red-400 hover:text-red-600 focus:outline-none"
+      class="absolute right-10 top-1/2 transform -translate-y-1/2 text-primary-1 hover:text-primary-4 focus:outline-none"
       @click="clearSearch"
     >
       <i data-feather="x"></i>
@@ -24,46 +21,50 @@
     </button>
   </div>
 </template>
-  
-  <script>
+
+<script>
 export default {
-  name: "SearchBar",
+  name: 'SearchBar',
   props: {
     placeholder: {
       type: String,
-      default: "Search...",
+      default: 'Search...'
     },
     customClasses: {
       type: String,
-      default: "",
+      default: ''
     },
     maxWidth: {
       type: String,
-      default: "1166px",
-    },
+      default: '1166px'
+    }
   },
   data() {
     return {
-      searchQuery: "",
+      searchQuery: ''
     };
   },
   watch: {
     searchQuery() {
       this.updateFeatherIcons();
-    },
+    }
   },
   mounted() {
     this.updateFeatherIcons();
   },
   methods: {
     clearSearch() {
-      this.searchQuery = "";
+      this.searchQuery = '';
+      this.$emit('clear-search'); // Emit an event when search is cleared
     },
     updateFeatherIcons() {
       this.$nextTick(() => {
         this.$feather.replace();
       });
     },
-  },
+    onInput() {
+      this.$emit('search-query', this.searchQuery); // Emit the search query
+    }
+  }
 };
-</script> 
+</script>

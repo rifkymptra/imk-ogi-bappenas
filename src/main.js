@@ -18,6 +18,7 @@ import Sekretariat from './views/Pelajari/Sekretariat.vue';
 import News from './views/Publikasi/News.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
 import Laporan from './views/Publikasi/Laporan.vue';
+import IRM from './views/Publikasi/IRM.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -33,6 +34,7 @@ const routes = [
   { path: '/ran/dokumen-dan-publikasi-data', component: Dokumen},
   { path: '/pelajari/sekretariat', component: Sekretariat},
   { path: '/publikasi/laporan-dan-kajian', component: Laporan},
+  { path: '/publikasi/irm', component: IRM},
 ];
 
 const router = createRouter({

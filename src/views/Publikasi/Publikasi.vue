@@ -34,7 +34,7 @@
                 title="IRM"
                 description="Independent Reporting Mechanism"
                 linkText="Unduh IRM"
-                link="#"
+                link="/publikasi/irm"
             />
             </div>
             <div class="h-[calc(12vh)]"></div>

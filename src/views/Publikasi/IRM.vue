@@ -8,17 +8,13 @@
       <TitleSection
         link="/publikasi"
         linkText="PUBLIKASI OGI"
-        heading="Laporan "
-        subheading1="dan "
-        subheading2="Kajian"
-        :headingPrimary="true"
-        :subheading1Primary="false"
-        :subheading2Primary="true"
+        heading="Independent Reporting Mechanism"
+        :headingPrimary="false"
       />
   
       <!-- Search Bar -->
       <div class="container mx-auto flex justify-center mt-5 px-4">
-        <SearchBar placeholder="Cari Laporan dan Kajian OGI" customClasses="" maxWidth="1166px" @search-query="onSearchQuery" @clear-search="clearSearchQuery"/>
+        <SearchBar placeholder="Cari Berkas IRM" customClasses="" maxWidth="1166px" @search-query="onSearchQuery" @clear-search="clearSearchQuery"/>
       </div>
       <div class="h-[calc(5vh)]"></div>
   
@@ -61,7 +57,7 @@
                   Paling Banyak Diunduh
                 </button>
               </div>
-              <h3 class="font-inter font-semibold text-[12px] mb-2">Kategori Laporan dan Kajian</h3>
+              <h3 class="font-inter font-semibold text-[12px] mb-2">Kategori IRM</h3>
               <div class="relative w-full">
                 <select v-model="selectedCategory" class="w-full px-4 py-2 border rounded-lg pr-10 appearance-none text-[14px]">
                   <option v-for="category in categories" :key="category">{{ category }}</option>
@@ -99,7 +95,7 @@
           <!-- Reports Section -->
           <div class="w-3/4 pl-4">
             <div v-if="filteredReports.length === 0" class="p-4 bg-white shadow-card rounded-lg">
-              <p class="font-inter font-bold text-[18px] text-center">Tidak ada laporan atau berita terkait.</p>
+              <p class="font-inter font-bold text-[18px] text-center">Tidak ada berkas IRM terkait.</p>
             </div>
             <div v-else class="space-y-4">
               <!-- Report Card -->
@@ -177,11 +173,11 @@
   import TitleSection from "../../components/TitleSection.vue";
   import SearchBar from "../../components/SearchBar.vue";
   import Slider from "@vueform/slider";
-  import Laporan from '../../assets/data/laporan.json';
+  import IRM from '../../assets/data/IRM.json';
   import ScrollButton from "../../components/ScrollButton.vue";
   
   export default {
-    name: "Laporan",
+    name: "IRM",
     components: {
       Header,
       Footer,
@@ -194,8 +190,8 @@
       return {
         sortCriteria: 'relevance', // Default sorting criteria
         selectedCategory: 'Semua', // Default selected category
-        reports: Laporan, // Load the reports data from JSON
-        filteredReports: Laporan, // To store filtered reports
+        reports: IRM, // Load the reports data from JSON
+        filteredReports: IRM, // To store filtered reports
         searchQuery: '', // To store the search query
         currentPage: 1,
         itemsPerPage: 5,

@@ -241,7 +241,7 @@ import Dokumen from "../../assets/data/dokumen.json";
 import ScrollButton from "../../components/ScrollButton.vue";
 
 export default {
-  name: "News",
+  name: "Dokumen",
   components: {
     Header,
     Footer,
@@ -344,6 +344,12 @@ export default {
   created() {
     // Set the initial year range based on the reports data
     this.yearRange = [this.minYear, this.maxYear];
+
+    // Get the search query from URL parameters if available
+    if (this.$route.query.search) {
+      this.searchQuery = this.$route.query.search;
+      this.applyFilter();
+    }
   },
   mounted() {
     this.$feather.replace(); // Replace <i> tags with Feather Icons on mount
@@ -353,6 +359,7 @@ export default {
   },
 };
 </script>
+
 
 <style src="@vueform/slider/themes/default.css"></style>
 <style>

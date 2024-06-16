@@ -24,6 +24,7 @@ import IRM from './views/Publikasi/IRM.vue'
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/home', component: Home },
   { path: '/pelajari', component: Pelajari }, 
   { path: '/pelajari/karir', component: Karir },
   { path: '/publikasi', component: Publikasi},

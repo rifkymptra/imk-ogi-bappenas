@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="max-h-fit my-16 mx-72">
+  <div class="max-w-screen-lg mx-auto my-8 md:my-16 px-4 md:px-8">
     <TitleSection
       link="/ran"
       linkText="Rencana Aksi Nasional"
@@ -9,8 +9,8 @@
       :headingPrimary="false"
       :subheadingPrimary="true"
     />
-    <div class="text-center font-inter text-lg mx-6">
-      <p>
+    <div class="text-center font-inter text-base md:text-lg mx-auto md:mx-6">
+      <p class="">
         Mekanisme monitoring dan evaluasi untuk pelaksanaan RAN OGI di periode
         2022-2024, Kementerian/Lembaga melaporkan kegiatan ko-kreasi per
         triwulan ke dalam Sistem Monitoring dan Evaluasi Kantor Staf Presiden
@@ -20,7 +20,7 @@
         dengan Kementerian/Lembaga ke dalam sistem monitoring dan evaluasi yang
         ada di website Open Government Indonesia.
       </p>
-      <p class="mt-8">
+      <p class="mt-4 md:mt-8">
         Periode pelaporan kegiatan dan capaian masing-masing instansi dilakukan
         setiap semester dengan tujuan agar Kementerian/Lembaga lebih fokus dalam
         implementasi RAN dan dapat menghasilkan keluaran yang lebih berdaya
@@ -31,7 +31,7 @@
         dengan jelas.
       </p>
     </div>
-    <div class="flex justify-center items-center mt-20">
+    <div class="flex justify-center items-center mt-12 md:mt-20">
       <InfoCard
         iconClass="/RAN/lock.svg"
         title="Pelaporan Money OMS"
@@ -60,3 +60,4 @@ export default {
   },
 };
 </script>
+

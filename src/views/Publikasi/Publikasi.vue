@@ -20,7 +20,7 @@
                 title="Infografis"
                 description="Hasil pengolahan dan analisis oleh tim OGI."
                 linkText="Lihat infografis"
-                link="#"
+                link="/publikasi/infografis"
             />
             <Card
                 image="/src/assets/laporan kajian.jpg"

@@ -20,7 +20,8 @@ import Kegiatan from './views/Pelajari/Kegiatan.vue';
 import News from './views/Publikasi/News.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
 import Laporan from './views/Publikasi/Laporan.vue';
-import IRM from './views/Publikasi/IRM.vue'
+import IRM from './views/Publikasi/IRM.vue';
+import Infografis from './views/Publikasi/Infografis.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -39,6 +40,7 @@ const routes = [
   { path: '/pelajari/kegiatan', component: Kegiatan},
   { path: '/publikasi/laporan-dan-kajian', component: Laporan},
   { path: '/publikasi/irm', component: IRM},
+  { path: '/publikasi/infografis', component: Infografis},
 ];
 
 const router = createRouter({

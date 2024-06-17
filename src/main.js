@@ -16,6 +16,7 @@ import Dokumen from './views/RAN/Dokumen.vue';
 import Sekretariat from './views/Pelajari/Sekretariat.vue';
 import Komitmen1 from './views/RAN/Komitmen/Komitmen1.vue';
 import Kegiatan from './views/Pelajari/Kegiatan.vue';
+import EventDetail from './views/Pelajari/Kegiatan2.vue';
 // Publikasi
 import News from './views/Publikasi/News.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
@@ -39,6 +40,8 @@ const routes = [
   { path: '/pelajari/kegiatan', component: Kegiatan},
   { path: '/publikasi/laporan-dan-kajian', component: Laporan},
   { path: '/publikasi/irm', component: IRM},
+  { path: '/pelajari/kegiatan/:id', component: EventDetail },
+  
 ];
 
 const router = createRouter({

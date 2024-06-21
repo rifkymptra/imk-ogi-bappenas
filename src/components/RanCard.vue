@@ -13,7 +13,7 @@
         Langkah nyata menuju transparansi dan partisipasi publik. Bersama-sama,
         kita wujudkan pemerintahan yang inovatif, akuntabel, dan inklusif!
       </p>
-      <a href="#" class="cursor-pointer inline-block">
+      <a href="/ran" class="cursor-pointer inline-block">
         <button
           class="bg-primary-1 hover:bg-primary-2 text-white font-semibold py-2 px-6 mb-8 rounded-full shadow-sm transition duration-300 shadow-primary-1 group mt-4 cursor-pointer"
         >

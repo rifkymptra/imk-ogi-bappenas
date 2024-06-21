@@ -37,37 +37,37 @@
         <h2 class="font-semibold mb-4 ml-11">Eksplorasi</h2>
         <ul class="text-neutral-5/60 ml-11">
           <li class="mb-2">
-            <a href="#" class="hover:text-white">Tentang Kami</a>
+            <a href="/pelajari/perjalanan" class="hover:text-white">Tentang Kami</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white">Kegiatan Kami</a>
+            <a href="/pelajari/kegiatan" class="hover:text-white">Kegiatan Kami</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white">Dokumen Rencana Aksi OGI</a>
+            <a href="/ran/dokumen-dan-publikasi-data" class="hover:text-white">Dokumen Rencana Aksi OGI</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white">OGI News</a>
+            <a href="/publikasi/ogi-news" class="hover:text-white">OGI News</a>
           </li>
-          <li class="mb-2"><a href="#" class="hover:text-white">Laporan</a></li>
+          <li class="mb-2"><a href="/publikasi/laporan-dan-kajian" class="hover:text-white">Laporan</a></li>
         </ul>
       </div>
       <div class="w-full md:w-1/4">
         <h2 class="font-semibold mb-4">Tautan Lainnya</h2>
         <ul class="text-neutral-5/60">
           <li class="mb-2">
-            <a href="#" class="hover:text-white">BAPPENAS</a>
+            <a href="https://www.bappenas.go.id/" class="hover:text-white">BAPPENAS</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white">OGP Local - Semarang</a>
+            <a href="https://ogi.bappenas.go.id/ogplocal_semarang" class="hover:text-white">OGP Local - Semarang</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white">OGP Local - Banggai</a>
+            <a href="https://ogi.bappenas.go.id/ogplocal_kabbanggai" class="hover:text-white">OGP Local - Banggai</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white">OGP Local - Sumbawa Barat</a>
+            <a href="https://ogi.bappenas.go.id/ogplocal_ntb" class="hover:text-white">OGP Local - Sumbawa Barat</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-white"
+            <a href="https://ogi.bappenas.go.id/ogplocal_kabbrebes" class="hover:text-white"
               >OGP Local - Kabupaten Brebes</a
             >
           </li>

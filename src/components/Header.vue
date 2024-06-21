@@ -3,25 +3,29 @@
     <div
       class="container mx-auto px-4 flex items-center justify-between flex-wrap md:flex-nowrap"
     >
-      <div class="flex items-center space-x-4">
+      <a href="/" class="flex items-center space-x-4">
         <img
           src="../assets/Logo_Original.svg"
           alt="Logo"
           class="h-12 md:h-20"
         />
-      </div>
+      </a>
       <nav
         :class="{ hidden: !mobileMenuOpen, flex: mobileMenuOpen }"
         class="hidden md:flex space-x-4 items-center w-full md:w-auto mt-4 md:mt-0 flex-col md:flex-row"
       >
-        <a href="/" class="text-gray-800 font-semibold">Beranda</a>
+        <a href="/" class="text-gray-800 font-semibold hover:text-primary-1"
+          >Beranda</a
+        >
         <div class="relative group">
           <a
             href="/ran"
             class="text-gray-800 font-semibold flex items-center group"
           >
-            <span class="block md:hidden">RAN</span>
-            <span class="hidden md:block">Rencana Aksi Nasional</span>
+            <span class="block md:hidden hover:text-primary-1">RAN</span>
+            <span class="hidden md:block hover:text-primary-1"
+              >Rencana Aksi Nasional</span
+            >
             <img
               src="../assets/chevron-down.svg"
               alt="Dropdown"
@@ -48,8 +52,8 @@
         </div>
         <div class="relative group">
           <a
-            href="#"
-            class="text-gray-800 font-semibold flex items-center group"
+            href="/publikasi"
+            class="text-gray-800 font-semibold flex items-center group hover:text-primary-1"
           >
             Publikasi
             <img
@@ -61,18 +65,30 @@
           <div
             class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">OGI News</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Infografik</a>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/publikasi/ogi-news"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >OGI News</a
+            >
+            <a
+              href="/publikasi/infografik"
+              class="block px-4 py-2 hover:bg-gray-100"
+              >Infografik</a
+            >
+            <a
+              href="/publikasi/laporan-dan-kajian"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Laporan dan Kajian</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">IRM</a>
+            <a href="publikasi/irm" class="block px-4 py-2 hover:bg-gray-100"
+              >IRM</a
+            >
           </div>
         </div>
         <div class="relative group">
           <a
-            href="#"
-            class="text-gray-800 font-semibold flex items-center group"
+            href="/pelajari"
+            class="text-gray-800 font-semibold flex items-center group hover:text-primary-1"
           >
             Pelajari
             <img
@@ -84,16 +100,26 @@
           <div
             class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48"
           >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/pelajari/perjalanan"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Tentang Kami</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/pelajari/sekretariat"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Sekretariat Kami</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100"
+            <a
+              href="/pelajari/kegiatan"
+              class="block px-4 py-2 hover:bg-gray-100"
               >Kegiatan Kami</a
             >
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Karir</a>
+            <a
+              href="/pelajari/karir"
+              class="block px-4 py-2 hover:bg-gray-100 hover:text-primary-1"
+              >Karir</a
+            >
           </div>
         </div>
       </nav>
@@ -117,13 +143,13 @@
           </span>
         </button>
         <div
-          class="absolute bg-white shadow-lg py-2 mt-12 md:mt-40 pr-4"
+          class="absolute bg-white shadow-lg pt-2 mt-12 md:mt-40"
           v-if="showMenu"
           ref="menu"
         >
           <a
             href="#"
-            class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2"
+            class="flex justify-center items-center gap-2 hover:bg-gray-100 py-2 w-20"
           >
             <img
               src="../assets/indonesia.png"
@@ -134,7 +160,7 @@
           </a>
           <a
             href="#"
-            class="flex items-center gap-2 hover:bg-gray-100 px-4 py-2"
+            class="flex items-center gap-2 hover:bg-gray-100 py-2 w-20 justify-center"
           >
             <img
               src="../assets/english.png"
@@ -162,7 +188,7 @@
 
   <div>
     <div
-      class="w-full search-bar-overlay max-w-screen-2xl fixed top-0 right-0 z-50 bg-neutral-5/50 py-16 flex justify-center items-center h-[100vh]"
+      class="w-full search-bar-overlay max-w-screen-2xl fixed bottom-0 right-0 z-50 bg-neutral-5/50 py-16 flex justify-center items-center h-[88vh]"
       v-if="showSearchBar"
     >
       <input
@@ -170,6 +196,7 @@
         placeholder="Cari Dokumen RAN OGI..."
         class="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500 mx-24"
         v-model="searchQuery"
+        @keyup.enter="searchDocuments"
       />
       <button
         v-if="searchQuery"
@@ -180,6 +207,7 @@
       </button>
       <button
         class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none mx-24"
+        @click="searchDocuments"
       >
         <i data-feather="search"></i>
       </button>
@@ -242,12 +270,22 @@ export default {
         this.$feather.replace();
       });
     },
+    searchDocuments() {
+      if (this.searchQuery) {
+        this.$router.push({
+          path: "/ran/dokumen-dan-publikasi-data",
+          query: { search: this.searchQuery },
+        });
+        this.showSearchBar = false;
+      }
+    },
   },
   beforeDestroy() {
     document.removeEventListener("click", this.closeMenu);
   },
 };
 </script>
+
 
 <style>
 .search-bar-overlay {

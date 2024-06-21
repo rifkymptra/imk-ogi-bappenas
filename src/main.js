@@ -17,11 +17,11 @@ import Sekretariat from './views/Pelajari/Sekretariat.vue';
 import Komitmen1 from './views/RAN/Komitmen/Komitmen1.vue';
 import Kegiatan from './views/Pelajari/Kegiatan.vue';
 import EventDetail from './views/Pelajari/Kegiatan2.vue';
-// Publikasi
 import News from './views/Publikasi/News.vue';
 import Publikasi from './views/Publikasi/Publikasi.vue';
 import Laporan from './views/Publikasi/Laporan.vue';
 import IRM from './views/Publikasi/IRM.vue';
+import Infografis from './views/Publikasi/Infografis.vue';
 import OMS from './views/RAN/OMS.vue';
 
 const routes = [
@@ -43,8 +43,8 @@ const routes = [
   { path: '/publikasi/ogi-news', component: News},
   { path: '/publikasi/laporan-dan-kajian', component: Laporan},
   { path: '/publikasi/irm', component: IRM},
+  { path: '/publikasi/infografis', component: Infografis},
   { path: '/pelajari/kegiatan/:id', component: EventDetail },
-  
 ];
 
 const router = createRouter({

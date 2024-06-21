@@ -53,7 +53,6 @@ import Footer from "../../components/Footer.vue";
 import Card from "../../components/Card.vue";
 import ScrollButton from "../../components/ScrollButton.vue";
 
-
 export default {
     name : "Pelajari",
   components: {

@@ -11,12 +11,12 @@
         <p class="mt-4">
           {{ deskripsi }}
         </p>
-        <KomitmenList
+        <TemptList
           title="Apa yang telah dilakukan sejauh ini untuk mengatasi permasalahan tersebut?"
           :textToAdd="permasalahan"
         />
-        <KomitmenList title="Solusi Apa yang diusulkan?" :textToAdd="solusi" />
-        <KomitmenList
+        <TemptList title="Solusi Apa yang diusulkan?" :textToAdd="solusi" />
+        <TemptList
           title="Hasil apa yang ingin dicapai dengan mengimplementasi komitmen ini?"
           :textToAdd="hasil"
         />
@@ -24,11 +24,11 @@
       <div class="mt-20 font-inter text-center mx-20">
         <h1 class="text-[3rem] font-bold -mt-8">Identifikasi Masalah</h1>
 
-        <KomitmenList
+        <TemptList
           title="Masalah apa yang ingin diselesaikan melalui komitmen ini?"
           :textToAdd="masalah"
         />
-        <KomitmenList
+        <TemptList
           title="Apa penyebab permasalahan tersebut?"
           :textToAdd="penyebab"
         />
@@ -37,15 +37,15 @@
       <div class="mt-20 font-inter text-center mx-20">
         <h1 class="text-[3rem] font-bold -mt-8">Analisa Komitmen</h1>
 
-        <KomitmenList
+        <TemptList
           title="Bagaimana komitmen ini akan mendorong transparansi?"
           :textToAdd="transparansi"
         />
-        <KomitmenList
+        <TemptList
           title="Bagaimana komitmen ini akan menumbuhkan akuntabilitas?"
           :textToAdd="akuntabilitas"
         />
-        <KomitmenList
+        <TemptList
           title="Bagaimana komitmen ini akan meningkatkan partisipasi masyarakat dalam mendefinisikan, mengimplementasikan, dan memonitor solusi?"
           :textToAdd="partisipasi"
         />
@@ -54,8 +54,8 @@
       <div class="mt-20 font-inter text-center mx-20">
         <h1 class="text-[3rem] font-bold -mt-8">Pelaksana Komitmen</h1>
 
-        <KomitmenList title="Kementerian/Lembaga" />
-        <KomitmenList title="Organisasi Masyarakat Sipil" />
+        <TemptList title="Kementerian/Lembaga" />
+        <TemptList title="Organisasi Masyarakat Sipil" />
       </div>
     </div>
     <div class="text-center mt-20">
@@ -112,7 +112,7 @@ import Header from "../Header.vue";
 import Footer from "../Footer.vue";
 import ScrollButton from "../ScrollButton.vue";
 import TitleSection from "../TitleSection.vue";
-import KomitmenList from "../RAN/KomitmenList.vue";
+import TemptList from "../RAN/TemptList.vue";
 
 export default {
   name: "Komitmen",
@@ -149,13 +149,21 @@ export default {
       type: String,
       required: true,
     },
+    solusi: {
+      type: String,
+      required: true,
+    },
+    hasil: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     Header,
     Footer,
     TitleSection,
     ScrollButton,
-    KomitmenList,
+    TemptList,
   },
 };
 </script>

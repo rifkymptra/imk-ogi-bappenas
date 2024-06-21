@@ -1,6 +1,6 @@
 <template>
   <TempKomitmen
-    title="Mendorong Transparansi dan dan Partisipasi dalam
+    title="1. Mendorong Transparansi dan dan Partisipasi dalam
   Pengadaan Barang/Jasa Pemerintah"
     deskripsi="Komitmen ini akan mendorong transparansi dalam keterbukaan informasi pada Pengadaan Barang/Jasa (PBJ) Pemerintah termasuk juga dalam pengadaan darurat, meningkatkan partisipasi Usaha Mikro Kecil dan Menengah (UMKM) dalam PBJ Pemerintah, dan memperluas keterlibatan masyarakat dalam memantau PBJ Pemerintah."
     permasalahan="Pada tahun 2021 diterbitkan Peraturan Komisi Informasi Pusat No. 1 Tahun 2021 tentang Standar Layanan Informasi Publik (Perkislip 1/2021) yang memiliki muatan pasal yang mengatur mengenai penjelasan rinci informasi PBJ yang harus dibuka oleh Badan Publik. Selain itu, Indikator Keterbukaan PBJ juga sudah masuk sebagai salah satu indikator dalam Indeks Keterbukaan Informasi Publik (IKIP). Pada sistem pengadaan secara elektronik, LKPP juga sudah mempublikasi dashboard PBJ Darurat dalam kanal Layanan Pengadaan Secara Elektronik (LPSE)."

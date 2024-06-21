@@ -21,7 +21,7 @@
         akademisi, dan mitra pembangunan untuk masa depan yang lebih transparan
         dan partisipatif.
       </h3>
-      <a href="#">
+      <a href="/pelajari">
         <button
           class="bg-primary-1 hover:bg-primary-2 text-white font-semibold py-2 px-4 md:px-6 rounded-full shadow-sm transition duration-300 shadow-primary-1 group mt-4 cursor-pointer relative"
         >
@@ -116,7 +116,9 @@
             <i data-feather="facebook" class="h-12 w-12 text-primary-1"></i>
           </div>
           <h3 class="text-lg font-bold text-neutral-1">Facebook</h3>
-          <a href="#" class="link-hover text-sm text-primary-1"
+          <a
+            href="https://www.facebook.com/Opengovindo/"
+            class="link-hover text-sm text-primary-1"
             >Lihat Profil ➔</a
           >
           <div
@@ -153,7 +155,10 @@
             />
           </div>
           <h3 class="text-lg font-bold text-neutral-1">Twitter</h3>
-          <a href="#" class="link-hover text-sm text-primary-1"
+          <a
+            href="https://x.com/opengovindo?lang=id"
+            target="_blank"
+            class="link-hover text-sm text-primary-1"
             >Lihat Profil ➔</a
           >
           <div>
@@ -184,7 +189,9 @@
             <i data-feather="instagram" class="h-12 w-12 text-primary-1"></i>
           </div>
           <h3 class="text-lg font-bold text-neutral-1">Instagram</h3>
-          <a href="#" class="link-hover text-sm text-primary-1"
+          <a
+            href="https://www.instagram.com/opengovindo/"
+            class="link-hover text-sm text-primary-1"
             >Lihat Profil ➔</a
           >
           <div

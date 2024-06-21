@@ -5,7 +5,7 @@
       link="/ran"
       linkText="RENCANA AKSI NASIONAL"
       heading="Komitmen "
-      subheading="RAN OGI VII"
+      subheading1="RAN OGI VII"
     />
     <div class="mb-8 max-w-[59rem] mx-auto font-inter text-xl">
       <p>

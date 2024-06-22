@@ -71,7 +71,7 @@
               >OGI News</a
             >
             <a
-              href="/publikasi/infografik"
+              href="/publikasi/infografis"
               class="block px-4 py-2 hover:bg-gray-100"
               >Infografik</a
             >
@@ -80,7 +80,7 @@
               class="block px-4 py-2 hover:bg-gray-100"
               >Laporan dan Kajian</a
             >
-            <a href="publikasi/irm" class="block px-4 py-2 hover:bg-gray-100"
+            <a href="/publikasi/irm" class="block px-4 py-2 hover:bg-gray-100"
               >IRM</a
             >
           </div>

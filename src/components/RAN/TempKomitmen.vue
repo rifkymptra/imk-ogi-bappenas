@@ -54,8 +54,8 @@
       <div class="mt-20 font-inter text-center mx-20">
         <h1 class="text-[3rem] font-bold -mt-8">Pelaksana Komitmen</h1>
 
-        <TemptList title="Kementerian/Lembaga" />
-        <TemptList title="Organisasi Masyarakat Sipil" />
+        <TemptList title="Kementerian/Lembaga" :textToAdd="kementerian" />
+        <TemptList title="Organisasi Masyarakat Sipil" :textToAdd="ormas" />
       </div>
     </div>
     <div class="text-center mt-20">
@@ -70,32 +70,22 @@
             </tr>
           </thead>
           <tbody class="font-light text-xl">
-            <tr class="bg-white">
+            <tr
+              v-for="(row, index) in tableData"
+              :key="index"
+              :class="index % 2 === 0 ? 'bg-white' : 'bg-primary-5/25'"
+            >
               <td class="py-2 px-4 text-neutral-3 font-inter">
-                (K/L) UK 1 : Peningkatan Kualitas Data Pemilik
-                Manfaat/Beneficial Ownership
+                {{ row.description }}
               </td>
-              <td class="py-2 px-4"></td>
+              <td class="py-2 px-4">{{ row.status }}</td>
               <td class="py-2 px-4 text-center">
-                <button
+                <a
+                  :href="row.href"
                   class="bg-primary-1 text-white py-1 px-3 rounded-md text-xs whitespace-nowrap"
                 >
                   Lihat
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-primary-5/25">
-              <td class="py-2 px-4 text-neutral-3">
-                (OMS) UK 1 : Peningkatan Kualitas Data Pemilik Manfaat/
-                Beneficial Ownership
-              </td>
-              <td class="py-2 px-4"></td>
-              <td class="py-2 px-4 text-center">
-                <button
-                  class="bg-primary-1 text-white py-1 px-3 rounded-md text-xs whitespace-nowrap"
-                >
-                  Lihat
-                </button>
+                </a>
               </td>
             </tr>
           </tbody>
@@ -106,8 +96,8 @@
   </div>
   <Footer />
 </template>
-  
-  <script>
+
+<script>
 import Header from "../Header.vue";
 import Footer from "../Footer.vue";
 import ScrollButton from "../ScrollButton.vue";
@@ -157,6 +147,19 @@ export default {
       type: String,
       required: true,
     },
+    tableData: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
+    kementerian: {
+      type: String,
+      required: true,
+    },
+    ormas: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     Header,
@@ -167,4 +170,7 @@ export default {
   },
 };
 </script>
-  
+
+<style scoped>
+/* Tambahkan gaya kustom di sini */
+</style>

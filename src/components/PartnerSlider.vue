@@ -92,7 +92,7 @@
 </template>
 
 <script>
-import cso1 from "../assets/cso1.png";
+import cso1 from "cso1.png";
 import cso2 from "../assets/cso2.png";
 import cso3 from "../assets/cso3.png";
 import cso4 from "../assets/cso4.png";

@@ -85,7 +85,6 @@ import pemerintah2 from "@/assets/pemerintah2.png";
 import pemerintah3 from "@/assets/pemerintah3.png";
 import pemerintah4 from "@/assets/pemerintah4.png";
 import pemerintah5 from "@/assets/pemerintah5.png";
-import pemerintah6 from "@/assets/pemerintah6.png";
 import pemerintah7 from "@/assets/pemerintah7.png";
 import pemerintah8 from "@/assets/pemerintah8.png";
 import pemerintah9 from "@/assets/pemerintah9.png";

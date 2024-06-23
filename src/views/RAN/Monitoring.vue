@@ -33,7 +33,7 @@
     </div>
     <div class="flex justify-center items-center mt-12 md:mt-20">
       <InfoCard
-        iconClass="/RAN/lock.svg"
+        :iconClass="lock"
         title="Pelaporan Money OMS"
         link="/ran/monitoring-dan-evaluasi/OMS"
       />
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import lock from "../../assets/RAN/lock.svg";
 import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import ScrollButton from "../../components/ScrollButton.vue";
@@ -51,6 +52,11 @@ import TitleSection from "../../components/TitleSection.vue";
 import InfoCard from "../../components/RAN/InfoCard.vue";
 
 export default {
+  data() {
+    return {
+      lock,
+    };
+  },
   components: {
     Header,
     Footer,

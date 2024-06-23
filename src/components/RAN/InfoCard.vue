@@ -35,7 +35,7 @@ export default {
   computed: {
     iconPath() {
       // Gunakan path relatif langsung berdasarkan prop iconClass
-      return `@/assets/${this.iconClass}`;
+      return `/assets/${this.iconClass}`;
     },
   },
   methods: {

@@ -28,7 +28,7 @@
               class="flex justify-center items-center bg-white text-center px-2 mx-2 rounded-md"
             >
               <img
-                :src="`/assets/${partner.logo}`"
+                :src="`/src/assets/${partner.logo}`"
                 :alt="partner.name"
                 class="h-20 w-20 pt-4 mb-4"
               />
@@ -46,7 +46,7 @@
                 class="flex justify-center items-center bg-white text-center px-2 mx-2 rounded-md mb-4"
               >
                 <img
-                  :src="`/assets/${partner.logo}`"
+                  :src="`/src/assets/${partner.logo}`"
                   :alt="partner.name"
                   class="h-20 w-20 pt-4 mb-4"
                 />
@@ -92,31 +92,52 @@
 </template>
 
 <script>
+import cso1 from "@/assets/cso1.png";
+import cso2 from "@/assets/cso2.png";
+import cso3 from "@/assets/cso3.png";
+import cso4 from "@/assets/cso4.png";
+import cso5 from "@/assets/cso5.png";
+import cso6 from "@/assets/cso6.png";
+import cso7 from "@/assets/cso7.png";
+import cso8 from "@/assets/cso8.png";
+import cso9 from "@/assets/cso9.png";
+import cso10 from "@/assets/cso10.png";
+import cso11 from "@/assets/cso11.png";
+import cso12 from "@/assets/cso12.png";
+import cso13 from "@/assets/cso13.png";
+import cso14 from "@/assets/cso14.png";
+import cso15 from "@/assets/cso15.png";
+import cso16 from "@/assets/cso16.png";
+import cso17 from "@/assets/cso17.png";
+import cso18 from "@/assets/cso18.png";
+import cso19 from "@/assets/cso19.png";
+import cso20 from "@/assets/cso20.png";
+
 export default {
   data() {
     return {
       currentSlide: 0,
       partners: [
-        { logo: "cso.png", name: "Partner 1" },
-        { logo: "cso1.png", name: "Partner 2" },
-        { logo: "cso2.png", name: "Partner 3" },
-        { logo: "cso3.png", name: "Partner 4" },
-        { logo: "cso4.png", name: "Partner 5" },
-        { logo: "cso5.png", name: "Partner 6" },
-        { logo: "cso6.png", name: "Partner 7" },
-        { logo: "cso7.png", name: "Partner 8" },
-        { logo: "cso8.png", name: "Partner 9" },
-        { logo: "cso9.png", name: "Partner 10" },
-        { logo: "cso10.png", name: "Partner 11" },
-        { logo: "cso11.png", name: "Partner 12" },
-        { logo: "cso12.png", name: "Partner 13" },
-        { logo: "cso13.png", name: "Partner 14" },
-        { logo: "cso14.png", name: "Partner 15" },
-        { logo: "cso15.png", name: "Partner 16" },
-        { logo: "cso16.jpg", name: "Partner 17" },
-        { logo: "cso17.png", name: "Partner 18" },
-        { logo: "cso18.jpg", name: "Partner 19" },
-        { logo: "cso19.png", name: "Partner 20" },
+        { logo: cso1, name: "Partner 1" },
+        { logo: cso2, name: "Partner 2" },
+        { logo: cso3, name: "Partner 3" },
+        { logo: cso4, name: "Partner 4" },
+        { logo: cso5, name: "Partner 5" },
+        { logo: cso6, name: "Partner 6" },
+        { logo: cso7, name: "Partner 7" },
+        { logo: cso8, name: "Partner 8" },
+        { logo: cso9, name: "Partner 9" },
+        { logo: cso10, name: "Partner 10" },
+        { logo: cso11, name: "Partner 11" },
+        { logo: cso12, name: "Partner 12" },
+        { logo: cso13, name: "Partner 13" },
+        { logo: cso14, name: "Partner 14" },
+        { logo: cso15, name: "Partner 15" },
+        { logo: cso16, name: "Partner 16" },
+        { logo: cso17, name: "Partner 17" },
+        { logo: cso18, name: "Partner 18" },
+        { logo: cso19, name: "Partner 19" },
+        { logo: cso20, name: "Partner 20" },
         // { logo: "cso20.png", name: "Partner 21" },
         // { logo: "cso21.png", name: "Partner 22" },
       ],

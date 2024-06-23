@@ -1,11 +1,6 @@
 <template>
   <div class="card bg-white shadow-md rounded-lg overflow-hidden">
-    <img
-      :src="require('@/assets' + imageSrc)"
-      alt="Card image"
-      class="w-full h-48 object-cover"
-    />
-
+    <img :src="imageSrc" alt="Card image" class="w-full h-48 object-cover" />
     <div class="p-4">
       <h2 class="font-inter font-semibold text-primary-1 text-[14px] mb-2">
         {{ kategori }}

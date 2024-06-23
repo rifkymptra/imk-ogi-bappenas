@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     logoPath() {
-      return new URL(`../assets/${this.logoSrc}`, import.meta.url).href;
+      return `/assets/${this.logoSrc}`;
     },
   },
 };

@@ -16,8 +16,11 @@
 </template>
 
 <script>
-// Menggunakan require.context untuk memuat gambar
-const images = require.context("@/assets", false, /\.svg$/);
+// Import gambar secara dinamis dengan menggunakan Vite
+const importAll = (context) => context.keys().map(context);
+const images = importAll(
+  require.context("@/assets", false, /\.(png|jpe?g|svg)$/)
+);
 
 export default {
   name: "InfoCard",
@@ -37,7 +40,14 @@ export default {
   },
   computed: {
     iconPath() {
-      return images(`./${this.iconClass}`).default;
+      // Cari gambar berdasarkan nama iconClass
+      const image = images.find((img) => img.default.includes(this.iconClass));
+      if (image) {
+        return image.default;
+      } else {
+        console.error(`Gambar tidak ditemukan untuk ${this.iconClass}`);
+        return ""; // Atau path default jika gambar tidak ditemukan
+      }
     },
   },
   methods: {

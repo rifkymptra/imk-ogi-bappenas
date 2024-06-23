@@ -7,19 +7,18 @@
         <div
           class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
         >
-          <img
-            :src="require(`@/assets/${iconClass}`).default"
-            alt=""
-            class="h-8 w-8 object-cover"
-          />
+          <img :src="iconPath" alt="" class="h-8 w-8 object-cover" />
         </div>
         <h3 class="font-semibold text-lg">{{ title }}</h3>
       </div>
     </div>
   </button>
 </template>
-  
-  <script>
+
+<script>
+// Menggunakan require.context untuk memuat gambar
+const images = require.context("@/assets", false, /\.svg$/);
+
 export default {
   name: "InfoCard",
   props: {
@@ -36,6 +35,11 @@ export default {
       required: true,
     },
   },
+  computed: {
+    iconPath() {
+      return images(`./${this.iconClass}`).default;
+    },
+  },
   methods: {
     navigate() {
       window.location.href = this.link;
@@ -43,8 +47,7 @@ export default {
   },
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
 /* Tambahkan style tambahan jika diperlukan */
 </style>
-  

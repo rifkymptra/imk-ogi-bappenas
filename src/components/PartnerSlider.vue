@@ -46,7 +46,7 @@
                 class="flex justify-center items-center bg-white text-center px-2 mx-2 rounded-md mb-4"
               >
                 <img
-                  :src="`/src/assets/${partner.logo}`"
+                  :src="`/assets/${partner.logo}`"
                   :alt="partner.name"
                   class="h-20 w-20 pt-4 mb-4"
                 />

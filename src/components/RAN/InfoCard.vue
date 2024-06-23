@@ -7,21 +7,19 @@
         <div
           class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
         >
-          <img :src="iconPath" alt="" class="h-8 w-8 object-cover" />
+          <img
+            :src="`@/assets/${iconClass}`"
+            alt=""
+            class="h-8 w-8 object-cover"
+          />
         </div>
         <h3 class="font-semibold text-lg">{{ title }}</h3>
       </div>
     </div>
   </button>
 </template>
-
-<script>
-// Import gambar secara dinamis dengan menggunakan Vite
-const importAll = (context) => context.keys().map(context);
-const images = importAll(
-  require.context("@/assets", false, /\.(png|jpe?g|svg)$/)
-);
-
+  
+  <script>
 export default {
   name: "InfoCard",
   props: {
@@ -38,18 +36,6 @@ export default {
       required: true,
     },
   },
-  computed: {
-    iconPath() {
-      // Cari gambar berdasarkan nama iconClass
-      const image = images.find((img) => img.default.includes(this.iconClass));
-      if (image) {
-        return image.default;
-      } else {
-        console.error(`Gambar tidak ditemukan untuk ${this.iconClass}`);
-        return ""; // Atau path default jika gambar tidak ditemukan
-      }
-    },
-  },
   methods: {
     navigate() {
       window.location.href = this.link;
@@ -57,7 +43,8 @@ export default {
   },
 };
 </script>
-
-<style scoped>
+  
+  <style scoped>
 /* Tambahkan style tambahan jika diperlukan */
 </style>
+  

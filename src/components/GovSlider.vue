@@ -29,7 +29,7 @@
             class="flex justify-center items-center bg-white h-44 w-44 rounded-3xl p-6"
           >
             <img
-              :src="require(`@/assets/${partner.logo}`).default"
+              :src="partner.logo"
               alt=""
               class="max-h-fit flex items-center justify-center"
             />
@@ -66,44 +66,66 @@
       ></span>
     </div>
     <img
-      src="@/assets/grafik-home-1.png"
+      src="../assets/grafik-home-1.png"
       alt=""
       class="absolute -bottom-32 -left-24 w-64 z-0"
     />
     <img
-      src="@/assets/grafik-home-4.png"
+      src="../assets/grafik-home-4.png"
       alt=""
       class="absolute -top-24 -right-40 w-76 z-0"
     />
   </div>
 </template>
+  
+  <script>
+import pemerintah from "@/assets/pemerintah.png";
+import pemerintah1 from "@/assets/pemerintah1.png";
+import pemerintah2 from "@/assets/pemerintah2.png";
+import pemerintah3 from "@/assets/pemerintah3.png";
+import pemerintah4 from "@/assets/pemerintah4.png";
+import pemerintah5 from "@/assets/pemerintah5.png";
+import pemerintah6 from "@/assets/pemerintah6.png";
+import pemerintah7 from "@/assets/pemerintah7.png";
+import pemerintah8 from "@/assets/pemerintah8.png";
+import pemerintah9 from "@/assets/pemerintah9.png";
+import pemerintah10 from "@/assets/pemerintah10.png";
+import newkl1 from "@/assets/newkl1.png";
+import newkl2 from "@/assets/newkl2.png";
+import newkl3 from "@/assets/newkl3.png";
+import newkl4 from "@/assets/newkl4.png";
+import newkl5 from "@/assets/newkl5.png";
+import newkl6 from "@/assets/newkl6.png";
+import newkl7 from "@/assets/newkl7.png";
+import newkl8 from "@/assets/newkl8.png";
+import newkl9 from "@/assets/newkl9.png";
+import newkl10 from "@/assets/newkl10.png";
 
-<script>
 export default {
   data() {
     return {
       currentSlide: 0,
       partners: [
-        { logo: "pemerintah.png", name: "Pemerintah 1" },
-        { logo: "pemerintah1.png", name: "Pemerintah 2" },
-        { logo: "pemerintah2.png", name: "Pemerintah 3" },
-        { logo: "pemerintah3.png", name: "Pemerintah 4" },
-        { logo: "pemerintah4.png", name: "Pemerintah 5" },
-        { logo: "pemerintah5.png", name: "Pemerintah 6" },
-        { logo: "pemerintah7.png", name: "Pemerintah 8" },
-        { logo: "pemerintah8.png", name: "Pemerintah 9" },
-        { logo: "pemerintah9.png", name: "Pemerintah 10" },
-        { logo: "pemerintah10.png", name: "Pemerintah 11" },
-        { logo: "newkl1.png", name: "KL 1" },
-        { logo: "newkl2.png", name: "KL 2" },
-        { logo: "newkl3.png", name: "KL 3" },
-        { logo: "newkl4.png", name: "KL 4" },
-        { logo: "newkl5.png", name: "KL 5" },
-        { logo: "newkl6.png", name: "KL 6" },
-        { logo: "newkl7.png", name: "KL 7" },
-        { logo: "newkl8.png", name: "KL 8" },
-        { logo: "newkl9.png", name: "KL 9" },
-        { logo: "newkl10.png", name: "KL 10" },
+        { logo: pemerintah, name: "Pemerintah 1" },
+        { logo: pemerintah1, name: "Pemerintah 2" },
+        { logo: pemerintah2, name: "Pemerintah 3" },
+        { logo: pemerintah3, name: "Pemerintah 4" },
+        { logo: pemerintah4, name: "Pemerintah 5" },
+        { logo: pemerintah5, name: "Pemerintah 6" },
+        { logo: pemerintah7, name: "Pemerintah 8" },
+        { logo: pemerintah8, name: "Pemerintah 9" },
+        { logo: pemerintah9, name: "Pemerintah 10" },
+        { logo: pemerintah10, name: "Pemerintah 11" },
+        { logo: newkl1, name: "KL 1" },
+        { logo: newkl2, name: "KL 2" },
+        { logo: newkl3, name: "KL 3" },
+        { logo: newkl4, name: "KL 4" },
+        { logo: newkl5, name: "KL 5" },
+        { logo: newkl6, name: "KL 6" },
+        { logo: newkl7, name: "KL 7" },
+        { logo: newkl8, name: "KL 8" },
+        { logo: newkl9, name: "KL 9" },
+        { logo: newkl10, name: "KL 10" },
       ],
       autoSlideInterval: null,
     };
@@ -146,7 +168,8 @@ export default {
   },
 };
 </script>
-
-<style scoped>
+  
+  <style scoped>
 /* Tidak perlu menambahkan gaya di sini karena semuanya menggunakan Tailwind CSS */
 </style>
+  

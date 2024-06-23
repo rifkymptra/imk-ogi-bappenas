@@ -9,14 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueform/slider": "^2.1.10",
     "feather-icons": "^4.29.2",
+    "sweetalert2": "^11.11.1",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vuetify": "^3.6.0-beta.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
+    "sass": "^1.77.5",
     "tailwindcss": "^3.4.4",
     "vite": "^5.2.0"
   }

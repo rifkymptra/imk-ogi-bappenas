@@ -7,19 +7,15 @@
         <div
           class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
         >
-          <img
-            :src="`@/assets/${iconClass}`"
-            alt=""
-            class="h-8 w-8 object-cover"
-          />
+          <img :src="iconPath" alt="" class="h-8 w-8 object-cover" />
         </div>
         <h3 class="font-semibold text-lg">{{ title }}</h3>
       </div>
     </div>
   </button>
 </template>
-  
-  <script>
+
+<script>
 export default {
   name: "InfoCard",
   props: {
@@ -36,6 +32,12 @@ export default {
       required: true,
     },
   },
+  computed: {
+    iconPath() {
+      // Gunakan path relatif langsung berdasarkan prop iconClass
+      return `@/assets/${this.iconClass}`;
+    },
+  },
   methods: {
     navigate() {
       window.location.href = this.link;
@@ -43,8 +45,7 @@ export default {
   },
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
 /* Tambahkan style tambahan jika diperlukan */
 </style>
-  

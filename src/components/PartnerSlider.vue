@@ -92,26 +92,26 @@
 </template>
 
 <script>
-import cso1 from "../assets/cso1.png";
-import cso2 from "../assets/cso2.png";
-import cso3 from "../assets/cso3.png";
-import cso4 from "../assets/cso4.png";
-import cso5 from "../assets/cso5.png";
-import cso6 from "../assets/cso6.png";
-import cso7 from "../assets/cso7.png";
-import cso8 from "../assets/cso8.png";
-import cso9 from "../assets/cso9.png";
-import cso10 from "../assets/cso10.png";
-import cso11 from "../assets/cso11.png";
-import cso12 from "../assets/cso12.png";
-import cso13 from "../assets/cso13.png";
-import cso14 from "../assets/cso14.png";
-import cso15 from "../assets/cso15.png";
-import cso16 from "../assets/cso16.png";
-import cso17 from "../assets/cso17.png";
-import cso18 from "../assets/cso18.png";
-import cso19 from "../assets/cso19.png";
-import cso20 from "../assets/cso20.png";
+import cso1 from "@/assets/cso1.png";
+import cso2 from "@/assets/cso2.png";
+import cso3 from "@/assets/cso3.png";
+import cso4 from "@/assets/cso4.png";
+import cso5 from "@/assets/cso5.png";
+import cso6 from "@/assets/cso6.png";
+import cso7 from "@/assets/cso7.png";
+import cso8 from "@/assets/cso8.png";
+import cso9 from "@/assets/cso9.png";
+import cso10 from "@/assets/cso10.png";
+import cso11 from "@/assets/cso11.png";
+import cso12 from "@/assets/cso12.png";
+import cso13 from "@/assets/cso13.png";
+import cso14 from "@/assets/cso14.png";
+import cso15 from "@/assets/cso15.png";
+import cso16 from "@/assets/cso16.jpg";
+import cso17 from "@/assets/cso17.png";
+import cso18 from "@/assets/cso18.jpg";
+import cso19 from "@/assets/cso19.png";
+import cso20 from "@/assets/cso20.png";
 
 export default {
   data() {

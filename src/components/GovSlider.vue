@@ -29,7 +29,7 @@
             class="flex justify-center items-center bg-white h-44 w-44 rounded-3xl p-6"
           >
             <img
-              :src="`/src/assets/${partner.logo}`"
+              :src="require(`@/assets/${partner.logo}`).default"
               alt=""
               class="max-h-fit flex items-center justify-center"
             />
@@ -66,19 +66,19 @@
       ></span>
     </div>
     <img
-      src="../assets/grafik-home-1.png"
+      src="@/assets/grafik-home-1.png"
       alt=""
       class="absolute -bottom-32 -left-24 w-64 z-0"
     />
     <img
-      src="../assets/grafik-home-4.png"
+      src="@/assets/grafik-home-4.png"
       alt=""
       class="absolute -top-24 -right-40 w-76 z-0"
     />
   </div>
 </template>
-  
-  <script>
+
+<script>
 export default {
   data() {
     return {
@@ -146,8 +146,7 @@ export default {
   },
 };
 </script>
-  
-  <style scoped>
+
+<style scoped>
 /* Tidak perlu menambahkan gaya di sini karena semuanya menggunakan Tailwind CSS */
 </style>
-  

@@ -61,12 +61,12 @@
             </h2>
             <div class="flex space-x-4 mt-2 ml-5 font-inter text-neutral-2">
               <LogoCard
-                LogoSrc="@/assets/bangai.png"
+                LogoSrc="/src/assets/bangai.png"
                 alt="Kab. Banggai"
                 label="Kab. Bangai"
               />
               <LogoCard
-                LogoSrc="../assets/semarang.png"
+                LogoSrc="/src/assets/semarang.png"
                 alt="Kota Semarang"
                 label="Kota Semarang"
               />

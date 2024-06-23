@@ -8,7 +8,7 @@
           class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
         >
           <img
-            :src="require(`@/assets/${iconClass}`).default"
+            :src="`@/assets/${iconClass}`"
             alt=""
             class="h-8 w-8 object-cover"
           />

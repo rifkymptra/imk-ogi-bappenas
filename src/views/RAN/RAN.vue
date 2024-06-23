@@ -32,7 +32,7 @@
       </div>
       <div v-if="infoCards.length % 2 !== 0" class="flex justify-center mt-4">
         <InfoCard
-          iconClass="/RAN/lock.svg"
+          :iconClass="lock"
           title="Komitmen RAN OGI VII"
           link="/ran/komitmen"
         />
@@ -48,6 +48,7 @@ import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import InfoCard from "../../components/RAN/InfoCard.vue";
 import ScrollButton from "../../components/ScrollButton.vue";
+import lock from "../../../public/lock.svg";
 
 export default {
   components: {
@@ -58,6 +59,7 @@ export default {
   },
   data() {
     return {
+      lock: lock,
       infoCards: [
         { iconClass: "cso.png", title: "Dokumen dan Publikasi Data" },
         { iconClass: "cso.png", title: "Monitoring dan Evaluasi" },

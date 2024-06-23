@@ -3,7 +3,7 @@
     <div
       class="flex flex-col items-center border rounded-lg shadow-md bg-white max-h-48 max-w-48"
     >
-      <img :src="logoPath" alt="" class="h-full w-full object-cover" />
+      <img :src="logoSrc" alt="" class="h-full w-full object-cover" />
     </div>
     <p class="text-[16px] font-inter font-semibold mt-2">
       {{ description }}
@@ -21,11 +21,6 @@ export default {
     logoSrc: {
       type: String,
       required: true,
-    },
-  },
-  computed: {
-    logoPath() {
-      return `/assets/${this.logoSrc}`;
     },
   },
 };

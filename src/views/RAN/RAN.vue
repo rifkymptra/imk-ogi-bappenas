@@ -19,16 +19,48 @@
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto items-center"
       >
-        <InfoCard
-          iconClass="/RAN/document.svg"
-          title="Dokumen dan Publikasi Data"
-          link="/ran/Dokumen-dan-Publikasi-Data"
-        />
-        <InfoCard
-          iconClass="/RAN/list.svg"
-          title="Monitoring dan Evaluasi"
-          link="/ran/Monitoring-dan-Evaluasi"
-        />
+        <div v-if="infoCards.length % 2 !== 0" class="flex justify-center mt-4">
+          <button @click="navigate3">
+            <div
+              class="bg-white border-2 rounded-lg drop-shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
+                >
+                  <img
+                    src="../../assets/RAN/document.svg"
+                    alt=""
+                    class="h-8 w-8 object-cover"
+                  />
+                </div>
+                <h3 class="font-semibold text-lg">
+                  Dokumen dan Publikasi Data
+                </h3>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div v-if="infoCards.length % 2 !== 0" class="flex justify-center mt-4">
+          <button @click="navigate2">
+            <div
+              class="bg-white border-2 rounded-lg drop-shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div class="flex items-center space-x-4">
+                <div
+                  class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
+                >
+                  <img
+                    src="../../assets/RAN/list.svg"
+                    alt=""
+                    class="h-8 w-8 object-cover"
+                  />
+                </div>
+                <h3 class="font-semibold text-lg">Monitoring dan Evaluasi</h3>
+              </div>
+            </div>
+          </button>
+        </div>
       </div>
       <div v-if="infoCards.length % 2 !== 0" class="flex justify-center mt-4">
         <button @click="navigate">
@@ -72,7 +104,13 @@ export default {
 
   methods: {
     navigate() {
-      window.location.href = this.link;
+      window.location.href = "/ran/komitmen";
+    },
+    navigate2() {
+      window.location.href = "/ran/monitoring-dan-evaluasi";
+    },
+    navigate3() {
+      window.location.href = "/ran/dokumen-dan-publikasi-data";
     },
   },
   data() {

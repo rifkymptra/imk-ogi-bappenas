@@ -31,11 +31,24 @@
         />
       </div>
       <div v-if="infoCards.length % 2 !== 0" class="flex justify-center mt-4">
-        <InfoCard
-          :iconClass="lock"
-          title="Komitmen RAN OGI VII"
-          link="/ran/komitmen"
-        />
+        <button @click="navigate">
+          <div
+            class="bg-white border-2 rounded-lg drop-shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="flex items-center space-x-4">
+              <div
+                class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
+              >
+                <img
+                  src="../../assets/RAN/lock.svg"
+                  alt=""
+                  class="h-8 w-8 object-cover"
+                />
+              </div>
+              <h3 class="font-semibold text-lg">Komitmen RAN OGI VII</h3>
+            </div>
+          </div>
+        </button>
       </div>
     </div>
     <Footer />
@@ -48,7 +61,6 @@ import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import InfoCard from "../../components/RAN/InfoCard.vue";
 import ScrollButton from "../../components/ScrollButton.vue";
-import lock from "../../../public/lock.svg";
 
 export default {
   components: {
@@ -57,9 +69,14 @@ export default {
     InfoCard,
     ScrollButton,
   },
+
+  methods: {
+    navigate() {
+      window.location.href = this.link;
+    },
+  },
   data() {
     return {
-      lock: lock,
       infoCards: [
         { iconClass: "cso.png", title: "Dokumen dan Publikasi Data" },
         { iconClass: "cso.png", title: "Monitoring dan Evaluasi" },

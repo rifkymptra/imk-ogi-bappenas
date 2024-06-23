@@ -32,11 +32,24 @@
       </p>
     </div>
     <div class="flex justify-center items-center mt-12 md:mt-20">
-      <InfoCard
-        :iconClass="lock"
-        title="Pelaporan Money OMS"
-        link="/ran/monitoring-dan-evaluasi/OMS"
-      />
+      <button @click="navigate">
+        <div
+          class="bg-white border-2 rounded-lg drop-shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+        >
+          <div class="flex items-center space-x-4">
+            <div
+              class="flex items-center justify-center h-16 w-16 bg-red-100 rounded-full"
+            >
+              <img
+                src="../../assets/RAN/lock.svg"
+                alt=""
+                class="h-8 w-8 object-cover"
+              />
+            </div>
+            <h3 class="font-semibold text-lg">Pelaporan Monev OMS</h3>
+          </div>
+        </div>
+      </button>
     </div>
   </div>
   <ScrollButton />
@@ -44,7 +57,6 @@
 </template>
 
 <script>
-import lock from "../../assets/RAN/lock.svg";
 import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import ScrollButton from "../../components/ScrollButton.vue";
@@ -52,10 +64,10 @@ import TitleSection from "../../components/TitleSection.vue";
 import InfoCard from "../../components/RAN/InfoCard.vue";
 
 export default {
-  data() {
-    return {
-      lock,
-    };
+  methods: {
+    navigate() {
+      this.$router.push("/ran/monitoring-dan-evaluasi/OMS");
+    },
   },
   components: {
     Header,

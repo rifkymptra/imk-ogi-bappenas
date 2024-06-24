@@ -66,18 +66,18 @@
                 label="Kab. Bangai"
               />
               <LogoCard
-                LogoSrc="/src/assets/semarang.png"
+                LogoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Seal_of_the_City_of_Semarang.svg/78px-Seal_of_the_City_of_Semarang.svg.png"
                 alt="Kota Semarang"
                 label="Kota Semarang"
               />
               <LogoCard LogoSrc="/src/assets/ntb.png" alt="NTB" label="NTB" />
               <LogoCard
-                LogoSrc="/src/assets/sumbawa.png"
+                LogoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Lambang_Kabupaten_Sumbawa_Barat.png/77px-Lambang_Kabupaten_Sumbawa_Barat.png"
                 alt="Sumbawa Barat"
                 label="Sumbawa Barat"
               />
               <LogoCard
-                LogoSrc="/src/assets/brebes.png"
+                LogoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Seal_of_Brebes_Regency.svg/100px-Seal_of_Brebes_Regency.svg.png"
                 alt="Kab. Brebes"
                 label="Kab. Brebes"
               />

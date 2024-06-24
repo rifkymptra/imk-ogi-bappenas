@@ -4,7 +4,7 @@
       class="flex flex-col items-center border rounded-lg shadow-md bg-white max-h-48 max-w-48"
     >
       <img
-        :src="require(`../assets/${logoSrc}`)"
+        :src="`/src/assets/${logoSrc}`"
         alt=""
         class="h-full w-full object-cover"
       />

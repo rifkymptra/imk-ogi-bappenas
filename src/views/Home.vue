@@ -61,30 +61,36 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <LogoCard
           description="Kantor Staf Wakil Presiden"
-          logoSrc="logo-ksp.png"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah1.png"
         />
         <LogoCard
           description="Kementrian Luar Negeri"
-          logoSrc="logo-kemlu.png"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah2.png"
         />
         <LogoCard
           description="Badan Perencanaan Pembagunan Nasional"
-          logoSrc="logo-bappenas.png"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah3new.png"
         />
         <LogoCard
           description="Kementrian Dalam Negeri"
-          logoSrc="logo-kemdagri.png"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah4.png"
         />
         <LogoCard
           description="Kementrian Komunikasi dan Informatika RI"
-          logoSrc="logo-kominfo.png"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah5.png"
         />
         <LogoCard
           description="International NGO Forum on Indonesian Development"
-          logoSrc="logo-imfid.png"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah6.png"
         />
-        <LogoCard description="Komisi Informasi Pusat" logoSrc="logo-KIP.png" />
-        <LogoCard description="Kementrian PANRB" logoSrc="logo-panrb.png" />
+        <LogoCard
+          description="Komisi Informasi Pusat"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah7.png"
+        />
+        <LogoCard
+          description="Kementrian PANRB"
+          logoSrc="https://ogi.bappenas.go.id/assets/img/clients/pengarah8.png"
+        />
       </div>
     </div>
 

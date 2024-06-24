@@ -61,7 +61,7 @@
             </h2>
             <div class="flex space-x-4 mt-2 ml-5 font-inter text-neutral-2">
               <LogoCard
-                LogoSrc="/src/assets/bangai.png"
+                LogoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Lambang_Kabupaten_Banggai.tif/lossless-page1-100px-Lambang_Kabupaten_Banggai.tif.png"
                 alt="Kab. Banggai"
                 label="Kab. Bangai"
               />

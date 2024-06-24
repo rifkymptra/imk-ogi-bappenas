@@ -40,36 +40,36 @@
             <div class="grid grid-cols-2 gap-y-10 space-x-10 pt-4">
               <TeamMemberCard
                 class="ml-10"
-                photoSrc="/src/assets/sekre-1.png"
+                photoSrc="https://ogi.bappenas.go.id/assets/img/team/Maharani_photo-removebg-preview%20(1).png"
                 alt="Maharani Putri S.W."
                 name="Maharani Putri S.W."
                 role="Open Government Partnership Point of Contact for Indonesia"
               />
               <TeamMemberCard
-                photoSrc="/src/assets/sekre-2.png"
+                photoSrc="https://ogi.bappenas.go.id/assets/img/team/karina.png"
                 alt="Karina Apriliadhatin"
                 name="Karina Apriliadhatin"
                 role="Perencana"
               />
               <TeamMemberCard
-                photoSrc="/src/assets/sekre-3.png"
+                photoSrc="https://ogi.bappenas.go.id/assets/img/team/THEO.png"
                 alt="Theodorus Agustinus H."
                 name="Theodorus Agustinus H."
                 role="Tenaga Ahli Kebijakan Publik"
               />
               <TeamMemberCard
-                photoSrc="/src/assets/sekre-4.png"
+                photoSrc="https://ogi.bappenas.go.id/assets/img/team/tata.png"
                 name="Andrieta Rafaela A."
                 role="Tenaga Ahli Kebijakan Publik"
               />
               <TeamMemberCard
-                photoSrc="/src/assets/sekre-5.png"
+                photoSrc="https://ogi.bappenas.go.id/assets/img/team/kikinew.png"
                 alt="Kiki Mulyawati"
                 name="Kiki Mulyawati"
                 role="Tenaga Ahli Web Developer"
               />
               <TeamMemberCard
-                photoSrc="/src/assets/sekre-6.png"
+                photoSrc="https://ogi.bappenas.go.id/assets/img/team/mbakniya.png"
                 alt="Rabbania Aulia F."
                 name="Rabbania Aulia F."
                 role="Tenaga Pendukung Administrasi"

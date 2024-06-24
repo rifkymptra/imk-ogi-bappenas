@@ -70,7 +70,11 @@
                 alt="Kota Semarang"
                 label="Kota Semarang"
               />
-              <LogoCard LogoSrc="/src/assets/ntb.png" alt="NTB" label="NTB" />
+              <LogoCard
+                LogoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Coat_of_arms_of_West_Nusa_Tenggara.svg/68px-Coat_of_arms_of_West_Nusa_Tenggara.svg.png"
+                alt="NTB"
+                label="NTB"
+              />
               <LogoCard
                 LogoSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Lambang_Kabupaten_Sumbawa_Barat.png/77px-Lambang_Kabupaten_Sumbawa_Barat.png"
                 alt="Sumbawa Barat"

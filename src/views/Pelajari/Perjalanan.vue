@@ -61,7 +61,7 @@
             </h2>
             <div class="flex space-x-4 mt-2 ml-5 font-inter text-neutral-2">
               <LogoCard
-                LogoSrc="https://drive.google.com/file/d/1wyGek1fL7TMvQ9i3yZQ07X2WecSkP9_x/view?usp=drive_link"
+                LogoSrc="/src/assets/bangai.png"
                 alt="Kab. Banggai"
                 label="Kab. Bangai"
               />
